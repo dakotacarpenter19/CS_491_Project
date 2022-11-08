@@ -1,33 +1,50 @@
 # Table of Contents
-1. Introduction
-    1.1 Purpose
-    1.2 Document Conventions
-    1.3 Intended Audience and Reading Suggestions
-    1.4 Project Scope
-    1.5 References
-2. Overall Description
-    2.1 Product Perspective
-    2.2 Product Features
-    2.3 User Classes and Characteristics
-    2.4 Operating Environment
-    2.5 Design and Implementation Constraints
-    2.6 User Documentation
-    2.7 Assumptions and Dependencies
-3. System Features
-    3.1 System Feature 1
-    3.2 System Feature 2 (and so on)
-4. External Interface Requirements
-    4.1 User Interfaces
-    4.2 Hardware Interfaces
-    4.3 Software Interfaces
-    4.4 Communications Interfaces
-5. Other Nonfunctional Requirements
-    5.1 Performance Requirements
-    5.2 Safety Requirements
-    5.3 Security Requirements
-    5.4 Software Quality Attributes
-6. Other Requirements
-Appendix A: Glossary
-Appendix B: Analysis Models
-Appendix C: Issues List
+<ol>
+    <li>Introduction
+        <ol>
+            <li>Purpose</li>
+            <li>Document Conventions</li>
+            <li>Intended Audience and Reading Suggestions</li>
+            <li>Project Scope</li>
+            <li>References</li>
+        </ol>
+    </li>
+    <li>Overall Description
+        <ol>
+            <li>Product Perspective</li>
+            <li>Product Features</li>
+            <li>User Classes and Characteristics</li>
+            <li>Operating Environments</li>
+            <li>Design and Implementation Constraints</li>
+            <li>User Documentation</li>
+            <li>Assumptions and Dependencies</li>
+        </ol>
+    </li>
+    <li>System Features
+        <ol>
+            <li>System Feature 1</li>
+            <li>System Feature 2 (and so on)</li>
+        </ol>
+    </li>
+    <li>External Interface Requirements
+        <ol>
+            <li>User Interfaces</li>
+            <li>Hardware Interfaces</li>
+            <li>Software Interfaces</li>
+            <li>Communications Interfaces</li>
+        </ol>
+    </li>
+    <li>Other Nonfunctional Requirements
+        <ol>
+            <li>Performance Requirements</li>
+            <li>Safety Requirements</li>
+            <li>Security Requirements</li>
+            <li>Software Quality Attributes</li>
+        </ol>
+    </li>
+    <li>Other Requirements</li>
+</ol>
 
+Appendix A: Glossary  
+Appendix B: Analysis Models  
+Appendix C: Issues List  
