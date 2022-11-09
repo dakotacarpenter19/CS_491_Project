@@ -90,9 +90,11 @@ REQ-5: Store the last position of the pieces for the undo function.
 # **4. External Interface Requirements**
 ## **4.1 User Interfaces**  
 There will be a start game button, restart button, help button, and exit game button. There will also be a full-sized checkers board in the center of the application.  
-![image](startgame.png)  
-![image](chooseplayer.png)  
-![image](gameboard.png)  
+![image](images/startgame.png)  
+
+![image](images/chooseplayer.png)  
+
+![image](images/gameboard.png)  
 
 ## **4.2 Hardware Interfaces**  
 Supported devices include desktop and laptop computers.
@@ -125,15 +127,15 @@ There are no other requirements for this project since it is to be a simple stru
 Under construction.  
 
 # **Appendix B: Analysis Models**  
-![image](ucdiagram.png)  
+![image](images/ucdiagram.png)  
 
-![image](activitydiagram.png)  
+![image](images/activitydiagram.png)  
 
-![image](sequencediagram.png)  
+![image](images/sequencediagram.png)  
 
-![image](classdiagram.png)  
+![image](images/classdiagram.png)  
 
-![image](statemachinediagram.png)  
+![image](images/statemachinediagram.png)  
 
 # **Appendix C: Issues List**  
 Potential requirements issues that remain to be solved: storing data in arrays for the gameboard (piece positions, board square status)  
