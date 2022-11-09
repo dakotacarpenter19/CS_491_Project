@@ -1,3 +1,11 @@
+<h1>Software Requirements Specification for Checkers</h1>
+
+<h2>Prepared by Lale Saparova and Dakota Carpenter<br>
+<br>
+WIU-CS 491 Soft.Eng.1<br>
+<br>
+11.06.22</h2>
+
 # Table of Contents
 
 1. 	Introduction<br>
