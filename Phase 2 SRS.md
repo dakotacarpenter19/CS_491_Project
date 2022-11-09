@@ -118,4 +118,19 @@ The user will not be required to provide any personal information for the checke
 ## **5.4 Software Quality Attributes**  
 Checkers will react to the user's commands promptly to ensure dependability and accuracy. After every game of Checkers, we'll strive to develop a feature that saves the user's progress for flexibility and adaptation. In this manner, the user can restart the game at a respectable beginning point in the event that the user's operating device experiences a power outage or other problems while the user is playing. The graphical user interface will be easy for the user to use in terms of usability. The user's screen will essentially show all play possibilities in our game, which does not favor one over the other in terms of usability or learning. In terms of availability, Checkers will be available to the user at any time. Moreover, for reliability our game should not cause any crashes to a user’s system.  
 
-# **6. Other Requirements**
+# **6. Other Requirements**  
+There are no other requirements for this project since it is to be a simple structured game and design with minimal requirements for the user as well as from the user interface. For the legal requirements, it was discussed and described in Security Requirements in section 5.3.  
+
+# **Appendix A: Glossary**  
+Under construction.  
+
+# **Appendix B: Analysis Models**  
+![image](ucdiagram.png)  
+
+![image](activitydiagram.png)  
+
+![image](sequencediagram.png)  
+
+![image](classdiagram.png)  
+
+![image](statemachinediagram.png)  
