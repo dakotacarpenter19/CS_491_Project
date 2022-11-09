@@ -86,3 +86,25 @@ The player should be able to confirm or undo their move before the next playerâ€
 ### **3.3.2 Functional Requirements**  
 REQ-4: The player should be able to move their piece.  
 REQ-5: Store the last position of the pieces for the undo function.  
+
+# **4. External Interface Requirements**
+## **4.1 User Interfaces**  
+There will be a start game button, restart button, help button, and exit game button. There will also be a full-sized checkers board in the center of the application.  
+![image](startgame.png)  
+![image](chooseplayer.png)  
+![image](gameboard.png)  
+
+## **4.2 Hardware Interfaces**  
+Supported devices include desktop and laptop computers.
+## **4.3 Software Interfaces**  
+Checkers game is to be developed for devices that support Java 8 or later versions using a game development tool.  
+<ul>
+	<li>NetBeans: primary game development library using GUI</li>
+</ul>
+## **4.4 Communications Interfaces**  
+<ul>
+	<li>HTTP/HTTPS</li>
+	<li>xxx@checkers-website.com - domain-oriented email address.</li>
+</ul>
+
+# **Other Nonfunctional Requirements**
