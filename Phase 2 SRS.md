@@ -134,3 +134,9 @@ Under construction.
 ![image](classdiagram.png)  
 
 ![image](statemachinediagram.png)  
+
+# **Appendix C: Issues List**  
+Potential requirements issues that remain to be solved: storing data in arrays for the gameboard (piece positions, board square status)  
+
+# **GitHub Repository for our project**  
+https://github.com/dakotacarpenter19/CS_491_Project
