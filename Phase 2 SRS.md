@@ -44,3 +44,26 @@ The SRS paper also explains project managers and tests a mechanism to make sure 
 This system's scope is to create a checkers gaming platform using the NetBeans GUI interface. The system will support the game with multiple players including a CPU player. On opposite ends of the gaming board, two opponents play the game of checkers. Players 1 and 2 each have a set of dark and light pieces.  Player’s switch turns. An opponent's pieces cannot be moved by a player. The support for the fundamental set of features (multiplayer, CPU), as well as the simplicity of developing game comprehension, are advantages of creating this game. This game is available for low-memory devices. 
 ## **1.5 References**  
 Game Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
+
+# **2. Overall Description**
+## **2.1 Product Perspective**  
+This product is a replacement for certain existing systems. The consumer can alter the game's state by interacting with it while offline. The user's device must support Java 8 or later versions.
+## **2.2 Product Features**  
+This product will have a fully playable Checkers game. It will have a simple multiplayer feature that allows the user to play against another human or a CPU player. The program will also include an easily understandable user interface. 
+## **2.3 User Classes and Characteristics**  
+We anticipate that this product will be primarily used by a younger audience with a basic level of literacy. Our product can also be used by people of older ages as well, but the simplicity may not be as appealing or necessary for that user class.
+## **2.4 Operating Environment**  
+Our software will be runnable on operating systems compatible with Java 8 and above.
+## **2.5 Design and Implementation Constraints**  
+Acquiring requirements and developing the game's software architecture make up the design phase. Throughout the implementation phase, the phase will be reviewed multiple times. The iterative process of developing the game is what makes up the implementation phase. The overall architecture should be put into practice before writing the actual code, tests, and comprehensive documentation. There will be several sprints during the implementation phase.
+## **2.6 User Documentation**  
+The user can learn how to play checkers using several online resources, such as https://en.wikipedia.org/wiki/Checkers#General_rules
+## **2.7 Assumptions and Dependencies**  
+<ul>
+	<li>Users have a device capable of running java 8 or later versions.
+		<ul>
+			<li>The user's device needs to be quick enough to handle java files if that is not possible.</li>
+		</ul>
+	</li>
+	<li>Plan where and how to store data from the user.</li>
+</ul>  
