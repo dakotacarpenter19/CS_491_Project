@@ -1,6 +1,6 @@
 # Table of Contents
 
-1. Introduction<br>
+1. 	Introduction<br>
 		1.1 Purpose<br>
 		1.2 Document Conventions<br> 
       	1.3 Intended Audience and Reading Suggestions<br>
@@ -67,3 +67,22 @@ The user can learn how to play checkers using several online resources, such as 
 	</li>
 	<li>Plan where and how to store data from the user.</li>
 </ul>  
+
+# **3. System Features**
+## **3.1 Multiplayer**
+### **3.1.1 Description and Priority**  
+The user should be able to play against another person or a CPU player. This feature is of high priority. 
+### **3.1.2 Functional Requirements**  
+REQ-1: Player selection
+## **3.2 Stalemate/draw Detection**
+### **3.2.1 Description and Priority**  
+The game should be able to detect if there are no possible moves remaining, then proceed by either declaring a winner or a draw. This feature is a high priority.
+### **3.2.2 Functional Requirements**  
+REQ-2: Check if any valid moves are remaining from either player.  
+REQ-3: Count the number of remaining pieces each player has on the board.  
+## **3.3 Confirm/undo Move**
+### **3.3.1 Description and Priority**  
+The player should be able to confirm or undo their move before the next player’s turn.
+### **3.3.2 Functional Requirements**  
+REQ-4: The player should be able to move their piece.  
+REQ-5: Store the last position of the pieces for the undo function.  
