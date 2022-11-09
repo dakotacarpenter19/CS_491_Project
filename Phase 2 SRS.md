@@ -100,11 +100,22 @@ Supported devices include desktop and laptop computers.
 Checkers game is to be developed for devices that support Java 8 or later versions using a game development tool.  
 <ul>
 	<li>NetBeans: primary game development library using GUI</li>
-</ul>
+</ul>  
+
 ## **4.4 Communications Interfaces**  
 <ul>
 	<li>HTTP/HTTPS</li>
 	<li>xxx@checkers-website.com - domain-oriented email address.</li>
 </ul>
 
-# **Other Nonfunctional Requirements**
+# **5. Other Nonfunctional Requirements**
+## **5.1 Performance Requirements**  
+Performance shouldn't be a problem given what the current operating systems are capable of. However, operating systems with less powerful hardware and older versions could have issues and possibly operate more slowly. The design will be adjusted to provide a pleasurable experience on the systems offered. The game's functioning will be simple enough to understand, and the graphics won't be extremely complex to avoid slowing down the system.
+## **5.2 Safety Requirements**  
+None of the other applications installed on the user's system will be impacted or damaged by the Checkers game. The user's operating system won't be harmed by the game because it will not cause overheating to the user's computer.  
+## **5.3 Security Requirements**  
+The user will not be required to provide any personal information for the checkers game, making it impossible for it to jeopardize such information. Playing the game does not require user login. Simply downloading our application will allow the user to begin playing checkers. The user's operating system will be available to any illegal player who obtains it, giving them access to the Checkers game. The user is responsible for making sure that nobody else will be able to access their operating device.  
+## **5.4 Software Quality Attributes**  
+Checkers will react to the user's commands promptly to ensure dependability and accuracy. After every game of Checkers, we'll strive to develop a feature that saves the user's progress for flexibility and adaptation. In this manner, the user can restart the game at a respectable beginning point in the event that the user's operating device experiences a power outage or other problems while the user is playing. The graphical user interface will be easy for the user to use in terms of usability. The user's screen will essentially show all play possibilities in our game, which does not favor one over the other in terms of usability or learning. In terms of availability, Checkers will be available to the user at any time. Moreover, for reliability our game should not cause any crashes to a user’s system.  
+
+# **6. Other Requirements**
