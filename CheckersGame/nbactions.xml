@@ -15,7 +15,6 @@
                 <exec.appArgs></exec.appArgs>
                 <exec.mainClass>com.mycompany.checkers.CheckersGame</exec.mainClass>
                 <exec.executable>java</exec.executable>
-                <exec.workingdir>/Users/dakotacarpenter/Desktop/CS 491 Project: Checkers/CS_491_Project/CheckersGame</exec.workingdir>
             </properties>
         </action>
         <action>
@@ -34,7 +33,6 @@
                 <exec.mainClass>com.mycompany.checkers.CheckersGame</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
-                <exec.workingdir>/Users/dakotacarpenter/Desktop/CS 491 Project: Checkers/CS_491_Project/CheckersGame</exec.workingdir>
             </properties>
         </action>
         <action>
@@ -52,7 +50,6 @@
                 <exec.mainClass>com.mycompany.checkers.CheckersGame</exec.mainClass>
                 <exec.executable>java</exec.executable>
                 <exec.appArgs></exec.appArgs>
-                <exec.workingdir>/Users/dakotacarpenter/Desktop/CS 491 Project: Checkers/CS_491_Project/CheckersGame</exec.workingdir>
             </properties>
         </action>
     </actions>
