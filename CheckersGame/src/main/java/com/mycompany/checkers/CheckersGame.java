@@ -9,14 +9,14 @@ package com.mycompany.checkers;
  *
  * @author lalesaparova
  */
-class Game {
+class CheckersGame {
     
-    public Game() {
+    public CheckersGame() {
         
     }
     
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        
-//}
+    public static void main(String args[]) {
+        System.out.println("Testing");
+        
+    }
 }
