@@ -11,12 +11,11 @@ package com.mycompany.checkers;
  */
 class CheckersGame {
     
-    public CheckersGame() {
-        
-    }
-    
     public static void main(String args[]) {
         System.out.println("Testing");
+        
+        CheckersBoard board = new CheckersBoard();
+        board.setVisible(true);
         
     }
 }
