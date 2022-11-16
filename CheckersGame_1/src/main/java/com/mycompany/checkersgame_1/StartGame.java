@@ -49,9 +49,8 @@ public class StartGame extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/checkersgame_1/checkers.jpg"))); // NOI18N
-        jLabel1.setPreferredSize(new java.awt.Dimension(1055, 596));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-240, -80, 670, 390));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Checkers.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
