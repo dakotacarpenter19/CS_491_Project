@@ -4,10 +4,13 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Color;
 
 public class PlayerChoice {
 	
-//	public JComboBox difficultyBox;
+	private String difficulty;
+	private String color;
 
 	public PlayerChoice() {
 		JFrame frame = new JFrame();
@@ -23,7 +26,7 @@ public class PlayerChoice {
 				frame.dispose();
 			}
 		});
-		btnNewButton.setBounds(121, 191, 99, 23);
+		btnNewButton.setBounds(20, 166, 148, 23);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Computer Player");
@@ -33,13 +36,36 @@ public class PlayerChoice {
 				frame.dispose();
 			}
 		});
-		btnNewButton_1.setBounds(230, 191, 127, 23);
+		btnNewButton_1.setBounds(20, 200, 148, 23);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JComboBox difficultyBox = new JComboBox();
+		difficultyBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setDifficulty(difficultyBox.getSelectedItem().toString());
+			}
+		});
 		difficultyBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2"}));
-		difficultyBox.setBounds(367, 191, 30, 22);
+		difficultyBox.setBounds(178, 200, 42, 22);
 		frame.getContentPane().add(difficultyBox);
+		
+		JComboBox colorSelection = new JComboBox();
+		colorSelection.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setColor(colorSelection.getSelectedItem().toString());
+			}
+		});
+		colorSelection.setModel(new DefaultComboBoxModel(new String[] {"Choose Color", "black", "red"}));
+		colorSelection.setSelectedIndex(0);
+		colorSelection.setBounds(20, 133, 148, 22);
+		frame.getContentPane().add(colorSelection);
+		
+		JLabel OptionsText = new JLabel("Game Options");
+		OptionsText.setHorizontalAlignment(SwingConstants.CENTER);
+		OptionsText.setForeground(new Color(255, 255, 255));
+		OptionsText.setFont(new Font("Tahoma", Font.BOLD, 32));
+		OptionsText.setBounds(81, 11, 269, 51);
+		frame.getContentPane().add(OptionsText);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(PlayerChoice.class.getResource("/images/Checkers.png")));
@@ -47,19 +73,26 @@ public class PlayerChoice {
 		frame.getContentPane().add(lblNewLabel);
 		frame.setVisible(true);
 		
-		int difficulty = chooseComputerDifficulty(difficultyBox.getSelectedItem());
+		
 	}
 	
-	public int chooseComputerDifficulty(int difficulty) {
-		if (difficulty == 1) {
-			difficulty = 1;
-		} else if (difficulty == 2) {
-			difficulty = 2;
+	public void setColor(String color) {
+		if (color.equals("red")) {
+			color = "red";
+		} else if (color.equals("black")) {
+			color = "black";
 		}
-		return difficulty;
 	}
 	
-	public int chooseColor() {
-		return 0;
+	public String getColor() {
+		return color;
+	}
+	
+	public void setDifficulty(String d) {
+		difficulty = d;
+	}
+	
+	public String getDifficulty() {
+		return difficulty;
 	}
 }
