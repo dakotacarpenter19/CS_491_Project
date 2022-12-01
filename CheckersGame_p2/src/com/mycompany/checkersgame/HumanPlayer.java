@@ -11,5 +11,5 @@ public class HumanPlayer extends Player {
         
     }
     
-    public void updateGame(Game game) {}
+    public void updateGame(CheckersGame game) {}
 }
