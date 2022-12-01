@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.Dimension;
 
 public class PlayerChoice {
+	
+//	public JComboBox difficultyBox;
 
 	public PlayerChoice() {
 		JFrame frame = new JFrame();
@@ -34,11 +36,30 @@ public class PlayerChoice {
 		btnNewButton_1.setBounds(230, 191, 127, 23);
 		frame.getContentPane().add(btnNewButton_1);
 		
+		JComboBox difficultyBox = new JComboBox();
+		difficultyBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2"}));
+		difficultyBox.setBounds(367, 191, 30, 22);
+		frame.getContentPane().add(difficultyBox);
+		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(PlayerChoice.class.getResource("/images/Checkers.png")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		frame.getContentPane().add(lblNewLabel);
 		frame.setVisible(true);
+		
+		int difficulty = chooseComputerDifficulty(difficultyBox.getSelectedItem());
 	}
 	
+	public int chooseComputerDifficulty(int difficulty) {
+		if (difficulty == 1) {
+			difficulty = 1;
+		} else if (difficulty == 2) {
+			difficulty = 2;
+		}
+		return difficulty;
+	}
+	
+	public int chooseColor() {
+		return 0;
+	}
 }

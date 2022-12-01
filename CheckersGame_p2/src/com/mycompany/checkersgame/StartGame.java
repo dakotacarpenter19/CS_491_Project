@@ -38,6 +38,13 @@ public class StartGame {
 		lblNewLabel.setIcon(new ImageIcon(StartGame.class.getResource("/images/Checkers.png")));
 		lblNewLabel.setBounds(10, 11, 434, 261);
 		frame.getContentPane().add(lblNewLabel);
+		
+		
+		PlayerChoice playerType = new PlayerChoice();
 
 	}
+	
+//	public boolean computerOpponent(boolean cpu_player) {
+//		
+//	}
 }
