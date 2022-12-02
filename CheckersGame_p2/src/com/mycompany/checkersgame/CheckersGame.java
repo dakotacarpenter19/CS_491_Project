@@ -13,7 +13,7 @@ public class CheckersGame {
 //		pseudo-code for phase 3:
 		
 //		IF spaceIsEmpty THEN
-//			IF player1.piece.getDirection = foward THEN
+//			IF player1.piece.getDirection = forward THEN
 //				valid = true;
 //			ELSE IF player1.piece.getDirection = backwards THEN
 //				IF player1.piece.isKing THEN
@@ -25,7 +25,20 @@ public class CheckersGame {
 //				valid = true;
 //			ELSE IF !player2.piece.spaceAfter THEN
 //				valid = false;
+		
 		return valid;
+	}
+	
+	public boolean King(Player player) {
+		
+		boolean KingStatus = false;
+		
+//		pseudo-code for phase 3:
+//		
+//		IF player.piece.getPosition = endOfBoard THEN
+//			KingStatus = true;
+		
+		return KingStatus;
 	}
 	
 }
