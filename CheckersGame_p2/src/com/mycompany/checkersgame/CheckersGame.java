@@ -1,5 +1,9 @@
 package com.mycompany.checkersgame;
 
+/*
+ * @author Dakota Carpenter and Lale Saparova
+ */
+
 public class CheckersGame {
 
 	public CheckersGame() {
