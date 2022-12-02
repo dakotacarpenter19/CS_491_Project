@@ -12,7 +12,7 @@ public class CheckersBoard {
 		
 		JFrame frame = new JFrame();
 		frame.setPreferredSize(new Dimension(700, 700));
-		frame.setSize(new Dimension(700, 775));
+		frame.setSize(new Dimension(820, 806));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -22,19 +22,19 @@ public class CheckersBoard {
 				System.exit(0);
 			}
 		});
-		ExitButton.setBounds(580, 11, 89, 23);
+		ExitButton.setBounds(705, 733, 89, 23);
 		frame.getContentPane().add(ExitButton);
 		
 		JButton MovePieceButton = new JButton("Move Piece");
-		MovePieceButton.setBounds(31, 664, 89, 23);
+		MovePieceButton.setBounds(10, 733, 105, 23);
 		frame.getContentPane().add(MovePieceButton);
 		
-		JButton UndoButton = new JButton("Undo Piece");
-		UndoButton.setBounds(130, 664, 89, 23);
+		JButton UndoButton = new JButton("Undo Move");
+		UndoButton.setBounds(125, 733, 105, 23);
 		frame.getContentPane().add(UndoButton);
 		
 		JButton InstructionsButton = new JButton("How to Play");
-		InstructionsButton.setBounds(229, 664, 89, 23);
+		InstructionsButton.setBounds(240, 733, 113, 23);
 		frame.getContentPane().add(InstructionsButton);
 		frame.setVisible(true);
 		
@@ -53,7 +53,7 @@ public class CheckersBoard {
 		for (int i = 0; i < 8; i++) {
 			for (int j = 0; j < 8; j++) {
 				board[i][j] = new JLabel();
-				board[i][j].setBounds(i * 50 + 100, j * 50 + 100, 50, 50);
+				board[i][j].setBounds(i * 75 + 100, j * 75 + 50, 75, 75);
 				if (i % 2 == j % 2) {
 					board[i][j].setIcon(new ImageIcon(StartGame.class.getResource("/images/square_red.png")));
 				} else {
