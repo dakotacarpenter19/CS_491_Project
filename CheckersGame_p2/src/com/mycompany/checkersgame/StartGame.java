@@ -41,7 +41,4 @@ public class StartGame {
 
 	}
 	
-//	public boolean computerOpponent(boolean cpu_player) {
-//		
-//	}
 }
