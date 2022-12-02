@@ -38,11 +38,9 @@ public class CheckersBoard {
 		frame.getContentPane().add(InstructionsButton);
 		frame.setVisible(true);
 		
+//		drawPieces(frame);
 		drawBoard(frame);
 		
-	}
-	
-	public void drawPieces() {
 		
 	}
 	
@@ -62,10 +60,29 @@ public class CheckersBoard {
 				frame.getContentPane().add(board[i][j]);
 			}
 		}
-		
 	}
 	
-	public void clearBoard() {
-		
-	}
+	// maybe removing this method
+	
+//	public void drawPieces(JFrame frame) {
+//		
+//		JLabel[][] pieces_black = new JLabel[8][3];
+//		JLabel[][] pieces_red = new JLabel[8][3];
+//		
+//		for (int i = 0; i < 8; i++) {
+//			for (int j = 0; j < 3; j++) {
+//				pieces_black[i][j] = new JLabel();
+//				pieces_black[i][j].setBounds(i * 75 + 100, j * 75 + 50, 50, 50);
+//				pieces_black[i][j].setIcon(new ImageIcon(StartGame.class.getResource("/images/piece_black.png")));
+//				frame.getContentPane().add(pieces_black[i][j]);
+//			}
+//			for (int k = 5; k < 8; k++) {
+//				pieces_red[i][k] = new JLabel();
+//				pieces_red[i][k].setBounds(i * 75 + 100, k * 75 + 50, 50, 50);
+//				pieces_red[i][k].setIcon(new ImageIcon(StartGame.class.getResource("/images/piece_red.png")));
+//				frame.getContentPane().add(pieces_red[i][k]);
+//			}
+//		}
+//	}
+	
 }

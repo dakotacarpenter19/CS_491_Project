@@ -11,6 +11,7 @@ public class PlayerChoice {
 	
 	private String difficulty;
 	private String color;
+	private String player2_name;
 
 	public PlayerChoice() {
 		JFrame frame = new JFrame();
@@ -33,6 +34,7 @@ public class PlayerChoice {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CheckersBoard c = new CheckersBoard();
+				ComputerPlayer cpu = new ComputerPlayer();
 				frame.dispose();
 			}
 		});
@@ -67,7 +69,21 @@ public class PlayerChoice {
 		OptionsText.setBounds(81, 11, 269, 51);
 		frame.getContentPane().add(OptionsText);
 		
+		JTextPane p2_name_label = new JTextPane();
+		p2_name_label.setEditable(false);
+		p2_name_label.setText("Player 2 Name: ");
+		p2_name_label.setBounds(178, 169, 98, 20);
+		frame.getContentPane().add(p2_name_label);
+		
+		JTextPane p2_name = new JTextPane();
+		p2_name.setText("Player 2");
+		p2_name.setBounds(289, 169, 98, 20);
+		frame.getContentPane().add(p2_name);
+		
+		player2_name = p2_name.getText();
+		
 		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setIcon(new ImageIcon(PlayerChoice.class.getResource("/images/Checkers.png")));
 		lblNewLabel.setBounds(0, 0, 434, 261);
 		frame.getContentPane().add(lblNewLabel);
@@ -94,5 +110,9 @@ public class PlayerChoice {
 	
 	public String getDifficulty() {
 		return difficulty;
+	}
+	
+	public String getPlayer2Name() {
+		return player2_name;
 	}
 }
