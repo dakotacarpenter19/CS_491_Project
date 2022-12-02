@@ -7,7 +7,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 public class CheckersBoard {
-
+	
 	public CheckersBoard() {
 		
 		JFrame frame = new JFrame();
@@ -38,6 +38,16 @@ public class CheckersBoard {
 		frame.getContentPane().add(InstructionsButton);
 		frame.setVisible(true);
 		
+		drawBoard(frame);
+		
+	}
+	
+	public void drawPieces() {
+		
+	}
+	
+	public void drawBoard(JFrame frame) {
+		
 		JLabel[][] board = new JLabel[8][8];
 		
 		for (int i = 0; i < 8; i++) {
@@ -53,17 +63,7 @@ public class CheckersBoard {
 			}
 		}
 		
-//		drawBoard();
 	}
-	
-	public void drawPieces() {
-		
-	}
-	
-//	public void drawBoard() {
-//		JFrame board = new JFrame();
-//		
-//	}
 	
 	public void clearBoard() {
 		
