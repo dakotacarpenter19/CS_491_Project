@@ -12,7 +12,7 @@ public class HumanPlayer extends Player {
 		HumanPlayer player = new HumanPlayer();
 	}
 	
-	public void move() {
+	public void move(String[][] board) {
 		// add pseudo-code
 	}
 	

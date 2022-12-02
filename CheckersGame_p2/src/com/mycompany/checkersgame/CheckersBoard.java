@@ -12,7 +12,11 @@ import java.awt.Graphics;
 
 public class CheckersBoard {
 	
+	public String[][] board;
+	
 	public CheckersBoard() {
+		
+//		CheckersBoard[][] board = new CheckersBoard[8][8];
 		
 		JFrame frame = new JFrame();
 		frame.setPreferredSize(new Dimension(700, 700));
