@@ -15,6 +15,8 @@ public class PlayerChoice {
 	
 	private String difficulty;
 	private String color;
+	private String color2;
+	private String player1_name;
 	private String player2_name;
 
 	public PlayerChoice() {
@@ -28,6 +30,9 @@ public class PlayerChoice {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CheckersBoard c = new CheckersBoard();
+				HumanPlayer p1 = new HumanPlayer(player1_name, color);
+				HumanPlayer p2 = new HumanPlayer(player2_name, color2);
+				
 				frame.dispose();
 			}
 		});
@@ -38,7 +43,7 @@ public class PlayerChoice {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CheckersBoard c = new CheckersBoard();
-				ComputerPlayer cpu = new ComputerPlayer();
+				ComputerPlayer cpu = new ComputerPlayer(color2, difficulty);
 				frame.dispose();
 			}
 		});
@@ -86,6 +91,19 @@ public class PlayerChoice {
 		
 		player2_name = p2_name.getText();
 		
+		JTextPane p1_name_label = new JTextPane();
+		p1_name_label.setText("Player 1 Name: ");
+		p1_name_label.setEditable(false);
+		p1_name_label.setBounds(178, 133, 98, 20);
+		frame.getContentPane().add(p1_name_label);
+		
+		JTextPane p1_name = new JTextPane();
+		p1_name.setText("Player 1");
+		p1_name.setBounds(289, 133, 98, 20);
+		frame.getContentPane().add(p1_name);
+		
+		player1_name = p1_name.getText();
+		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setIcon(new ImageIcon(PlayerChoice.class.getResource("/images/Checkers.png")));
@@ -96,11 +114,13 @@ public class PlayerChoice {
 		
 	}
 	
-	public void setColor(String color) {
+	public void setColor(String c) {
 		if (color.equals("red")) {
 			color = "red";
+			color2 = "black";
 		} else if (color.equals("black")) {
 			color = "black";
+			color2 = "red";
 		}
 	}
 	
@@ -114,6 +134,10 @@ public class PlayerChoice {
 	
 	public String getDifficulty() {
 		return difficulty;
+	}
+	
+	public String getPlayer1Name() {
+		return player1_name;
 	}
 	
 	public String getPlayer2Name() {

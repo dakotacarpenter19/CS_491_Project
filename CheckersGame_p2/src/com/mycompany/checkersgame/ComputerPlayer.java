@@ -9,8 +9,8 @@ public class ComputerPlayer {
 	private String difficulty;
 	private String pieceColor;
 	
-	public ComputerPlayer() {
-		ComputerPlayer cpu = new ComputerPlayer();
+	public ComputerPlayer(String color, String difficulty) {
+		ComputerPlayer cpu = new ComputerPlayer(pieceColor, difficulty);
 		
 		// probably add pseudo-code
 	}

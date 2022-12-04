@@ -12,6 +12,14 @@ public abstract class Player {
 		// add pseudo-code
 	}
 	
+	public void createPlayer(int playerType) {
+//		IF playerType == 0 THEN
+//			HumanPlayer();
+//		ELSE IF playerType == 1 THEN
+//			ComputerPlayer();
+//		ENDIF
+	}
+	
 	public void setName(String n) {
 		playerName = n;
 	}

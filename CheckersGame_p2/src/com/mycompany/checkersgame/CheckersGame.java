@@ -24,12 +24,16 @@ public class CheckersGame {
 //					valid = true;
 //				ELSE 
 //					valid = false;
+//				ENDIF
+//			ENDIF
 //		ELSE IF !spaceIsEmpty THEN
 //			IF player2.piece.spaceAfter THEN
 //				valid = true;
 //			ELSE IF !player2.piece.spaceAfter THEN
 //				valid = false;
-		
+//			ENDIF
+//		ENDIF
+			
 		return valid;
 	}
 	
@@ -41,6 +45,7 @@ public class CheckersGame {
 //		
 //		IF player.piece.getPosition = endOfBoard THEN
 //			KingStatus = true;
+//		ENDIF
 		
 		return KingStatus;
 	}

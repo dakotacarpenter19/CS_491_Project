@@ -70,10 +70,4 @@ public class CheckersBoard {
 		}
 	}
 	
-	// maybe removing this method
-	
-//	public void drawPieces(JFrame frame) {
-//		
-//	}
-	
 }

@@ -7,9 +7,12 @@ package com.mycompany.checkersgame;
 public class HumanPlayer extends Player {
     
 	private String name;
+	private String color;
 	
-	public HumanPlayer() {
-		HumanPlayer player = new HumanPlayer();
+	public HumanPlayer(String n, String c) {
+		HumanPlayer player = new HumanPlayer(name, color);
+		setName(n);
+		setColor(c);
 	}
 	
 	public void move(String[][] board) {
@@ -26,6 +29,14 @@ public class HumanPlayer extends Player {
 	
 	public String getName() {
 		return name;
+	}
+	
+	public void setColor(String c) {
+		color = c;
+	}
+	
+	public String getColor() {
+		return color;
 	}
 	
     public void updateGame(CheckersGame game) {
