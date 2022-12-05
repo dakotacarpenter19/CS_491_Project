@@ -16,8 +16,6 @@ public class CheckersBoard {
 	
 	public CheckersBoard() {
 		
-//		CheckersBoard[][] board = new CheckersBoard[8][8];
-		
 		JFrame frame = new JFrame();
 		frame.setPreferredSize(new Dimension(700, 700));
 		frame.setSize(new Dimension(820, 806));
@@ -46,10 +44,7 @@ public class CheckersBoard {
 		frame.getContentPane().add(InstructionsButton);
 		frame.setVisible(true);
 		
-//		drawPieces(frame);
 		drawBoard(frame);
-		
-		
 	}
 	
 	public void drawBoard(JFrame frame) {

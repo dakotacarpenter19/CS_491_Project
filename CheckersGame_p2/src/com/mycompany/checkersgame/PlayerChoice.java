@@ -111,7 +111,6 @@ public class PlayerChoice {
 		frame.getContentPane().add(lblNewLabel);
 		frame.setVisible(true);
 		
-		
 	}
 	
 	public void setColor(String c) {

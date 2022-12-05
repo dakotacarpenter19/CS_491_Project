@@ -8,19 +8,26 @@ public class HumanPlayer extends Player {
     
 	private String name;
 	private String color;
+	private int previousSpace;
 	
 	public HumanPlayer(String n, String c) {
+		super(n);
 		HumanPlayer player = new HumanPlayer(name, color);
 		setName(n);
 		setColor(c);
 	}
 	
 	public void move(String[][] board) {
-		// add pseudo-code
+//		IF (player makes a move) THEN
+//			previousSpace = getCurrentBoardLocation();
+//			humanMove = reponseMovePiece(playerMove);
+//		ELSE 
+//			Print("Player make a move");
+//		ENDIF
 	}
 	
 	public void undoMove() {
-		// add pseudo-code
+//		playerPosition = getPreviousSpace();
 	}
 	
 	public void setName(String n) {
@@ -38,9 +45,9 @@ public class HumanPlayer extends Player {
 	public String getColor() {
 		return color;
 	}
-	
-    public void updateGame(CheckersGame game) {
-    	// add pseudo-code
+    
+    public int getPreviousSpace() {
+    	return previousSpace;
     }
 
 	@Override

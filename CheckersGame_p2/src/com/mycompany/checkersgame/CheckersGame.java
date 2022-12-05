@@ -14,8 +14,6 @@ public class CheckersGame {
 		
 		boolean valid = false;
 		
-//		pseudo-code for phase 3:
-		
 //		IF spaceIsEmpty THEN
 //			IF player1.piece.getDirection = forward THEN
 //				valid = true;
@@ -41,13 +39,18 @@ public class CheckersGame {
 		
 		boolean KingStatus = false;
 		
-//		pseudo-code for phase 3:
-//		
 //		IF player.piece.getPosition = endOfBoard THEN
 //			KingStatus = true;
 //		ENDIF
 		
 		return KingStatus;
+	}
+	
+	void winner() {
+//		IF (player.pieces == 0) || opponent.pieces == 0)
+//			Print("You won " + player/human/cpu);
+//				Break;
+//		ENDIF
 	}
 	
 }

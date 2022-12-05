@@ -8,8 +8,8 @@ public abstract class Player {
 		
 	private String playerName;
 	
-	public Player() {
-		// add pseudo-code
+	public Player(String name) {
+		playerName = name;
 	}
 	
 	public void createPlayer(int playerType) {
@@ -29,8 +29,6 @@ public abstract class Player {
 	}
 	
 	public abstract boolean isHuman();
-	
-	public abstract void updateGame(CheckersGame game);
         
 	public String toString() {
 		return getClass().getSimpleName() + "[isHuman=" + isHuman() + "]";
