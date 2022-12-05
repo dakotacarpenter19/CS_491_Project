@@ -97,7 +97,8 @@ REQ-5: Store the last position of the pieces for the undo function.
 
 # **4. External Interface Requirements**
 ## **4.1 User Interfaces**  
-There will be a start game button, restart button, help button, and exit game button. There will also be a full-sized checkers board in the center of the application.  
+There will be a start game button, restart button, help button, and exit game button. There will also be a full-sized checkers board in the center of the application. 
+
 ![image](images/startgame.png)  
 
 ![image](images/chooseplayer.png)  
