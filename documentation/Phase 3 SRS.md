@@ -99,11 +99,11 @@ REQ-5: Store the last position of the pieces for the undo function.
 ## **4.1 User Interfaces**  
 There will be a start game button, restart button, help button, and exit game button. There will also be a full-sized checkers board in the center of the application. 
 
-![image](images/startgame.png)  
+![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/3c483127cfe452ea22c9e51952afb6800e3a6f0c/images/startgame.png)
 
-![image](images/chooseplayer.png)  
+![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/df0bcce8f5fe307e27b8156c58d216ede33c9e1a/images/chooseplayer.png)  
 
-![image](images/gameboard.png)  
+![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/3c483127cfe452ea22c9e51952afb6800e3a6f0c/images/gameboard.png) 
 
 ## **4.2 Hardware Interfaces**  
 Supported devices include desktop and laptop computers.
@@ -136,15 +136,15 @@ There are no other requirements for this project since it is to be a simple stru
 Under construction.  
 
 # **Appendix B: Analysis Models**  
-![image](images/ucdiagram.png)  
+![image](diagrams/ucdiagram.png)  
 
-![image](images/activitydiagram.png)  
+![image](diagrams/activitydiagram.png)  
 
-![image](images/sequencediagram.png)  
+![image](diagrams/sequencediagram.png)  
 
-![image](images/classdiagram.png)  
+![image](diagrams/classdiagram.png)  
 
-![image](images/statemachinediagram.png)  
+![image](diagrams/statemachinediagram.png)  
 
 # **Appendix C: Issues List**  
 Potential requirements issues that remain to be solved: 
