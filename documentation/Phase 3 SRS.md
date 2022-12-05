@@ -110,12 +110,12 @@ Supported devices include desktop and laptop computers.
 Checkers game is to be developed for devices that support Java 8 or later versions using a game development tool.  
 <ul>
 	<li>NetBeans: primary game development library using GUI</li>
+	<li>Eclipse: alternative IDE for development</li>
 </ul>  
 
 ## **4.4 Communications Interfaces**  
 <ul>
 	<li>HTTP/HTTPS</li>
-	<li>xxx@checkers-website.com - domain-oriented email address.</li>
 </ul>
 
 # **5. Other Nonfunctional Requirements**
@@ -146,7 +146,10 @@ Under construction.
 ![image](images/statemachinediagram.png)  
 
 # **Appendix C: Issues List**  
-Potential requirements issues that remain to be solved: storing data in arrays for the gameboard (piece positions, board square status)  
+Potential requirements issues that remain to be solved: 
+<ul>
+	<li>storing data in arrays for the gameboard (piece positions, board square status)</li>
+	<li>proper stalemate/draw detection</li>
 
 # **GitHub Repository for our project**  
 https://github.com/dakotacarpenter19/CS_491_Project
