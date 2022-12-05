@@ -114,10 +114,10 @@ public class PlayerChoice {
 	}
 	
 	public void setColor(String c) {
-		if (color.equals("red")) {
+		if (c.equals("red")) {
 			color = "red";
 			color2 = "black";
-		} else if (color.equals("black")) {
+		} else if (c.equals("black")) {
 			color = "black";
 			color2 = "red";
 		}

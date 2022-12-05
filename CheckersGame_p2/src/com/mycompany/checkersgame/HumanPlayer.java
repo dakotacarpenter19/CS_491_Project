@@ -6,7 +6,7 @@ package com.mycompany.checkersgame;
 
 public class HumanPlayer extends Player {
     
-	private String name;
+	private String name = "";
 	private String color;
 	private int previousSpace;
 	
