@@ -27,7 +27,16 @@ public class HumanPlayer extends Player {
 	}
 	
 	public void undoMove() {
-//		playerPosition = getPreviousSpace();
+//		WHILE (game did not end) {
+//			IF (undo) 
+//				Undo the move
+//				update the board view
+//			ENDIF
+//			
+//			Ask for the next move from the user
+//			Opponent's move
+//			Update the board view
+//		}
 	}
 	
 	public void setName(String n) {
