@@ -1,0 +1,88 @@
+Pseudo Code for Phase 3:
+
+[CheckersGame class]
+
+boolean checkValidMove(Player player1, Player player 2) {
+	boolean validMove = false;
+	
+	IF spaceIsEmpty THEN 
+		IF player1.piece.getDirection = forward THEN
+			validMove = true;
+		ELSE  IF player1.piece.getDirection = !forward THEN
+			IF player1.piece.isKing THEN 
+				validMove = true;
+			ELSE
+				validMove = false;
+			ENDIF
+		ENDIF
+	ELSE IF !spaceIsEmpty THEN 
+		IF player2.piece.spaceAfter THEN 
+			validMove = true;
+		ELSE IF !player2.piece.spaceAfter THEN 
+			validMove = false;
+		ENDIF 
+	ENDIF 
+	
+	return valid;
+}
+	
+boolean King(Player p) {
+	boolean KingStatus = false;
+	
+	IF player.piece.getPosition = endOfBoard THEN
+		KingStatus = true;
+	ENDIF 
+	
+	return KingStatus; 
+}
+
+void winner() {
+	IF (player.pieces == 0 || opponent.pieces == 0)
+		Print("You won " + player/human/cpu);
+			Break;
+	ENDIF 
+}
+
+[ComputerPlayer class]
+
+void move() {
+	IF (player made a move) THEN 
+		cpuMove = responseMovePiece(playerMove);
+	ELSE 
+		Print("Player make a move");
+	ENDIF
+}
+
+[HumanPlayer class]
+
+void move(String [][] board) {
+	IF (player makes a move) THEN\
+		previousSpace = getCurrentBoardLocation();
+		humanMove = responseMovePiece(playerMove);
+	ELSE 
+		Print("Player make a move");
+	ENDIF 
+}
+
+void undoMove() {
+	WHILE (game did not end) {
+		IF (undo)
+			Undo the move 
+			Update the board view
+		ENDIF 
+		
+		Ask for the next move from the user
+		Opponent's Move
+		Update the board view 
+	}
+}
+
+[Player class]
+
+void createPlayer(int playerType) {
+	IF playerType == 0 THEN 
+		HumanPlayer():
+	ELSE IF playerType == 1 THEN 
+		ComputerPlayer();
+	ENDIF 
+}
