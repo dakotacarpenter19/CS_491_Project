@@ -6,7 +6,7 @@
 ## Table of Contents
 
 <ul style="list-style-type:none">
-	<li>1. Overview
+	<li><strong>1. Overview</strong>
 		<ul style="list-style-type:none">
 			<li>1.1. Project Purpose, Objectives, and Success Criteria</li>
 			<li>1.2. Project Deliverables</li>
@@ -16,14 +16,14 @@
 			<li>1.6. Evolution of the Plan</li>
 		</ul>
 	</li>
-	<li>2. Project Organization
+	<li><strong>2. Project Organization</strong>
 		<ul style="list-style-type:none">
 			<li>2.1. External Interfaces</li>
 			<li>2.2. Internal Structure</li>
 			<li>2.3. Roles and Responsibilities</li>
 		</ul>
 	</li>
-	<li>3. Managerial Process Plans
+	<li><strong>3. Managerial Process Plans</strong>
 		<ul style="list-style-type:none">
 			<li>3.1. Start-Up Plans
 				<ul style="list-style-type:none">
@@ -50,7 +50,7 @@
 			<li>3.6. Project Close-Out Plan</li>
 		</ul>
 	</li>
-	<li>4. Technical Process Plans
+	<li><strong>4. Technical Process Plans</strong>
 		<ul style="list-style-type:none">
 			<li>4.1. Process Model</li>
 			<li>4.2. Methods, Tools, and Techniques</li>
@@ -59,4 +59,6 @@
 			<li>4.5. Documentation Plan</li>
 			<li>4.6. Process Improvement Plan</li>
 		</ul>
-	
+	</li>
+</ul>
+
