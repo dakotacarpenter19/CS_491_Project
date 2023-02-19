@@ -29,11 +29,11 @@ public class PlayerChoice {
 		JButton btnNewButton = new JButton("Human Player");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				
 				CheckersBoard c = new CheckersBoard();
 				HumanPlayer p1 = new HumanPlayer(player1_name, color);
 				HumanPlayer p2 = new HumanPlayer(player2_name, color2);
-				
-				frame.dispose();
 			}
 		});
 		btnNewButton.setBounds(20, 166, 148, 23);
@@ -42,9 +42,10 @@ public class PlayerChoice {
 		JButton btnNewButton_1 = new JButton("Computer Player");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				
 				CheckersBoard c = new CheckersBoard();
 				ComputerPlayer cpu = new ComputerPlayer(color2, difficulty);
-				frame.dispose();
 			}
 		});
 		btnNewButton_1.setBounds(20, 200, 148, 23);
