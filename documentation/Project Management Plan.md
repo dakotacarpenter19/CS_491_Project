@@ -109,6 +109,8 @@ Two software developers are required for the project. The knowledge of Java is a
 ### 3.2. Work Plan
 https://app.teamgantt.com/projects/gantt?ids=3396299
 
+![image]
+
 ### 3.3. Control Plan
 There will be scheduled meetings in order to ensure that the project will be delivered on time. If a project member is having trouble with theiur assigned part a plan evaluation would be required to ensure the project remains on schedule.
 
