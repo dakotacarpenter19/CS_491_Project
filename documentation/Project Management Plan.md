@@ -92,11 +92,7 @@ Software Lead (Phase 1) - Austin Winters
 
 #### 3.1.2 Staffing Plan
 Two software developers are required for the project. The knowledge of Java is required for the project. 
-#### 3.1.3 Staff Training Plan
-
 #### 3.1.4 Resource Acquisition Plan
-
-#### 3.1.5 Project Commitments
 
 ### 3.2. Work Plan
 
@@ -108,13 +104,9 @@ Two software developers are required for the project. The knowledge of Java is r
 
 #### 3.3.3 Schedule Control Plan
 
-#### 3.3.4 Budget Control Plan
-
 #### 3.3.5 Communication, Tracking, and Reporting Plan
 
 #### 3.3.6 Metrics Collection Plan
-
-### 3.4. Risk Management Plan
 
 ### 3.5. Issue Resolution Plan
 
