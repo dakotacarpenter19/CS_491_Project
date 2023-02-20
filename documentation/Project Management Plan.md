@@ -65,7 +65,7 @@
 ## 1. Overview
 
 ### 1.1. Project Purpose, Objectives, and Success Criteria
-This Project MAnagement Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Chackers will have and others that are crucial to the software.
+This Project Management Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Chackers will have and others that are crucial to the software.
 ### 1.2. Project Deliverables
 Deliverable: Checkers V1.0 Recipient: Professor Glaue Delivery Date: 3/31/23 Delivery Method: Online distribution
 ### 1.3. References
@@ -92,29 +92,29 @@ Software Lead (Phase 1) - Austin Winters
 * The estimation time was calculated using COCOMO.
 * The estimatmation occured on 2/10/23
 * Dakota and Austin were involved in the estimation process.
-* Estimations will be documented in the projects documentation. Estimation Reviews will be don either by Austin or Dakota.
+* Estimations will be documented in the projects documentation. Estimation Reviews will be done either by Austin or Dakota.
 #### 3.1.2 Staffing Plan
-Two software developers are required for the project. The knowledge of Java is required for the project. 
-#### 3.1.4 Resource Acquisition Plan
-
+Two software developers are required for the project. The knowledge of Java is also required for the project. 
+#### 3.1.3 Resource Acquisition Plan
+* Development Resources: Netbeans, Notepad++ for markdown documents, Java distributibles for jar files.
+* Testing Resources: Junit tests
+* Product resources: the project can run on a minimal 1gb drive, integrated graphics, and basic mouse peripherals.
 ### 3.2. Work Plan
-
+https://app.teamgantt.com/projects/gantt?ids=3396299
 ### 3.3. Control Plan
-
+There will be scheduled meetings in order to ensure that the project will be delivered on time. If a project member is having trouble with theiur assigned part a plan evaluation would be required to ensure the project remains on schedule.
 #### 3.3.1 Data Control Plan
-
+*Data to be managed: user input of their names and moves.
+*Content: checkerboard template and a checker piece templates will be used.
+*We won't be collecting any user data outside of the name for play.
 #### 3.3.2 Requirements Control Plan
-
+We will have meetings every week to two weeks to ensure the requirements are being met and delivered. 
 #### 3.3.3 Schedule Control Plan
-
-#### 3.3.5 Communication, Tracking, and Reporting Plan
-
-#### 3.3.6 Metrics Collection Plan
-
+We arew using a gantt chart in order to ensure the project is being completed on time.
+#### 3.3.4 Communication, Tracking, and Reporting Plan
+The project manager and lead programmer will be meeting face to face. Email will also be used for memos and emergency planning/communication.
 ### 3.5. Issue Resolution Plan
-
-### 3.6. Project Close-Out Plan
-
+We will document project issues through the projects github repository. The projact manager will have the final say in decisions for the project. The lead programmer will be in charge of any changes needed in the software and will have final descision concerning software features.
 ## 4. Technical Process Plan
 
 ### 4.1. Process Model
