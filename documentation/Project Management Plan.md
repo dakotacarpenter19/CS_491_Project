@@ -65,17 +65,13 @@
 ## 1. Overview
 
 ### 1.1. Project Purpose, Objectives, and Success Criteria
-
+This Project MAnagement Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Chackers will have and others that are crucial to the software.
 ### 1.2. Project Deliverables
-
-### 1.3. Assumptions, Dependencies, and Constraints
-
-### 1.4. References
-
-### 1.5. Definitions and Acronyms
-
-### 1.6. Evolution of the Plan
-
+Deliverable: Checkers V1.0 Recipient: Professor Glaue Delivery Date: 3/31/23 Delivery Method: Online distribution
+### 1.3. References
+Checkers Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
+### 1.4. Evolution of the Plan
+The evolution of this plan will occur if any unforseen requirements come up in the development cycle. This information will be provided to everyone in the project through scheduled project reviews.
 ## 2. Project Organization
 
 ### 2.1. External Interfaces
@@ -95,7 +91,7 @@ Software Lead (Phase 1) - Austin Winters
 #### 3.1.1 Estimation Plan
 
 #### 3.1.2 Staffing Plan
-
+Two software developers are required for the project. The knowledge of Java is required for the project. 
 #### 3.1.3 Staff Training Plan
 
 #### 3.1.4 Resource Acquisition Plan
