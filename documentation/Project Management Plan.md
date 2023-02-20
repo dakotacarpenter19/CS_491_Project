@@ -89,7 +89,10 @@ Software Lead (Phase 1) - Austin Winters
 ### 3.1. Start-Up Plans
 
 #### 3.1.1 Estimation Plan
-
+* The estimation time was calculated using COCOMO.
+* The estimatmation occured on 2/10/23
+* Dakota and Austin were involved in the estimation process.
+* Estimations will be documented in the projects documentation. Estimation Reviews will be don either by Austin or Dakota.
 #### 3.1.2 Staffing Plan
 Two software developers are required for the project. The knowledge of Java is required for the project. 
 #### 3.1.4 Resource Acquisition Plan
