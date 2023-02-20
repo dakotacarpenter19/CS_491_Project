@@ -65,13 +65,17 @@
 ## 1. Overview
 
 ### 1.1. Project Purpose, Objectives, and Success Criteria
-This Project Management Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Chackers will have and others that are crucial to the software.
+This Project Management Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Checkers will have and others that are crucial to the software.
+
 ### 1.2. Project Deliverables
 Deliverable: Checkers V1.0 Recipient: Professor Glaue Delivery Date: 3/31/23 Delivery Method: Online distribution
+
 ### 1.3. References
 Checkers Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
+
 ### 1.4. Evolution of the Plan
-The evolution of this plan will occur if any unforseen requirements come up in the development cycle. This information will be provided to everyone in the project through scheduled project reviews.
+The evolution of this plan will occur if any unforeseen requirements come up in the development cycle. This information will be provided to everyone in the project through scheduled project reviews.
+
 ## 2. Project Organization
 
 ### 2.1. External Interfaces
@@ -90,31 +94,41 @@ Software Lead (Phase 1) - Austin Winters
 
 #### 3.1.1 Estimation Plan
 * The estimation time was calculated using COCOMO.
-* The estimatmation occured on 2/10/23
+* The estimation occurred on 2/10/23
 * Dakota and Austin were involved in the estimation process.
 * Estimations will be documented in the projects documentation. Estimation Reviews will be done either by Austin or Dakota.
+
 #### 3.1.2 Staffing Plan
 Two software developers are required for the project. The knowledge of Java is also required for the project. 
+
 #### 3.1.3 Resource Acquisition Plan
-* Development Resources: Netbeans, Notepad++ for markdown documents, Java distributibles for jar files.
+* Development Resources: Netbeans, Notepad++ for markdown documents, Java distributables for jar files.
 * Testing Resources: Junit tests
 * Product resources: the project can run on a minimal 1gb drive, integrated graphics, and basic mouse peripherals.
+
 ### 3.2. Work Plan
 https://app.teamgantt.com/projects/gantt?ids=3396299
+
 ### 3.3. Control Plan
 There will be scheduled meetings in order to ensure that the project will be delivered on time. If a project member is having trouble with theiur assigned part a plan evaluation would be required to ensure the project remains on schedule.
+
 #### 3.3.1 Data Control Plan
 *Data to be managed: user input of their names and moves.
 *Content: checkerboard template and a checker piece templates will be used.
 *We won't be collecting any user data outside of the name for play.
+
 #### 3.3.2 Requirements Control Plan
 We will have meetings every week to two weeks to ensure the requirements are being met and delivered. 
+
 #### 3.3.3 Schedule Control Plan
-We arew using a gantt chart in order to ensure the project is being completed on time.
+We are using a Gantt chart in order to ensure the project is being completed on time.
+
 #### 3.3.4 Communication, Tracking, and Reporting Plan
 The project manager and lead programmer will be meeting face to face. Email will also be used for memos and emergency planning/communication.
+
 ### 3.5. Issue Resolution Plan
-We will document project issues through the projects github repository. The projact manager will have the final say in decisions for the project. The lead programmer will be in charge of any changes needed in the software and will have final descision concerning software features.
+We will document project issues through the projects GitHub repository. The project manager will have the final say in decisions for the project. The lead programmer will be in charge of any changes needed in the software and will have final decision concerning software features.
+
 ## 4. Technical Process Plan
 
 ### 4.1. Process Model
@@ -127,11 +141,16 @@ Development methodologies: Our software will be programmed in Java. Our project 
 Quality assurance practices: We will be reviewing each others' code to peer review it. We will test our software by playing the game ourselves as well as by letting people we know play the game. Our software will also utilize JUnit to test things such as moving pieces, capturing pieces, and winning/losing. 
 
 ### 4.3. Configuration Management Plan
+This project will use GitHub to manage releases and to report bugs. 
 
 ### 4.4. Quality Assurance Plan
+Quality assurance will probably account for at least 25% of the project effort, but we expect it to be more than that. Some tasks of QA include things such as making sure game pieces cannot make illegal moves, providing a responsive interface, etc. 
 
 ### 4.5. Documentation Plan
+We will be making a simple set of game instructions based off of information on the internet. This documentation will be accessible either through the game UI and in the game's directory. 
 
 ### 4.6. Process Improvement Plan
+Improved usage of GitHub: We will be keeping track of bugs/problems on GitHub rather than communicating them verbally or through email. 
 
 ## Revision History
+Version 1.0 draft 1 (February 19, 2023) - initial document created. 
