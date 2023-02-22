@@ -90,7 +90,7 @@ Software Lead (Phase 1) - Austin Winters
 * Dakota and Austin were involved in the estimation process.
 * Estimations will be documented in the projects documentation. Estimation Reviews will be done either by Austin or Dakota.
 
-####LINES OF CODE
+#### LINES OF CODE
 ![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/main/images/LOC.JPG)
 #### FUNCTION POINTS
 ![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/main/images/FP.JPG)
