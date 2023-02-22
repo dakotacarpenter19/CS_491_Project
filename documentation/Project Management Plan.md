@@ -90,10 +90,10 @@ Software Lead (Phase 1) - Austin Winters
 * Dakota and Austin were involved in the estimation process.
 * Estimations will be documented in the projects documentation. Estimation Reviews will be done either by Austin or Dakota.
 
-#### LINES OF CODE
-![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/main/images/LOC.JPG)
 #### FUNCTION POINTS
 ![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/main/images/FP.JPG)
+#### LINES OF CODE
+![image](https://github.com/dakotacarpenter19/CS_491_Project/blob/main/images/LOC.JPG)
 
 #### 3.1.2 Staffing Plan
 Two software developers are required for the project. The knowledge of Java is also required for the project. 
