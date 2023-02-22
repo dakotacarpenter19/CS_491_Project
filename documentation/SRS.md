@@ -1,10 +1,6 @@
 # <p align="right">Software Requirements Specification<br><br>For<br><br>Checkers</p>
 
-## <p align="right">Prepared by Dakota Carpenter, Austin Winters, and Lale Saparova</p>
-
-## <p align="right">WIU CS 491 Software Engineering I</p>
-
-## <p align="right">2.22.2023</p>
+## <p align="right">Prepared by Dakota Carpenter, Austin Winters, and Lale Saparova<br><br>WIU CS 492 Software Engineering II<br><br>2.22.2023</p>
 
 # Table of Contents
 
