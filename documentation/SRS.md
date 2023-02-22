@@ -158,15 +158,21 @@ There are no other requirements for this project since it is to be a simple stru
 Under construction.  
 
 # Appendix B: Analysis Models
-![image](diagrams/ucdiagram.png) 
+![Use Case Diagram](diagrams/ucdiagram.png) 
 
-![image](diagrams/activitydiagram.png) 
+![Activity Diagram](diagrams/activitydiagram.png) 
 
-![image](diagrams/sequencediagram.png) 
+![Sequence Diagram](diagrams/sequencediagram.png) 
 
-![image](diagrams/classdiagram.png) 
+![Class Diagram](diagrams/classdiagram.png) 
 
-![image](diagrams/statemachinediagram.png) 
+![State Machine Diagram](diagrams/statemachinediagram.png) 
+
+![Gantt Chart](diagrams/ganttchart.png)
+
+![FP Diagram](diagrams/FP.JPG)
+
+![LOC Diagram](diagrams/LOC.JPG)
 
 # Appendix C: Issues List
 Potential requirements issues that remain to be solved: 
