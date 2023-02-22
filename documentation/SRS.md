@@ -1,6 +1,6 @@
-# <p align="right">Software Requirements Specification<br><br>for<br><br>Checkers</p>
+# <p align="right">Software Requirements Specification<br><br>For<br><br>Checkers</p>
 
-## <p align="right">Prepared by Lale Saparova and Dakota Carpenter</p>
+## <p align="right">Prepared by Dakota Carpenter, Austin Winters, and Lale Saparova</p>
 
 ## <p align="right">WIU CS 491 Software Engineering I</p>
 
