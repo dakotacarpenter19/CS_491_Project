@@ -89,7 +89,11 @@ Software Lead (Phase 1) - Austin Winters
 * The estimation occurred on 2/10/23
 * Dakota and Austin were involved in the estimation process.
 * Estimations will be documented in the projects documentation. Estimation Reviews will be done either by Austin or Dakota.
+<<<<<<< HEAD
 ![image]()
+=======
+
+>>>>>>> 5237655ebfdce677d732324797ccda150e282399
 #### 3.1.2 Staffing Plan
 Two software developers are required for the project. The knowledge of Java is also required for the project. 
 
@@ -120,7 +124,11 @@ We are using a Gantt chart in order to ensure the project is being completed on 
 #### 3.3.4 Communication, Tracking, and Reporting Plan
 The project manager and lead programmer will be meeting face to face. Email will also be used for memos and emergency planning/communication.
 
+<<<<<<< HEAD
 ### 3.4. Issue Resolution Plan
+=======
+### 3.5. Issue Resolution Plan
+>>>>>>> 5237655ebfdce677d732324797ccda150e282399
 We will document project issues through the projects GitHub repository. The project manager will have the final say in decisions for the project. The lead programmer will be in charge of any changes needed in the software and will have final decision concerning software features.
 
 ## 4. Technical Process Plan
@@ -147,4 +155,8 @@ We will be making a simple set of game instructions based off of information on 
 Improved usage of GitHub: We will be keeping track of bugs/problems on GitHub rather than communicating them verbally or through email. 
 
 ## Revision History
+<<<<<<< HEAD
 Version 1.0 draft 1 (February 19, 2023) - initial document created. 
+=======
+Version 1.0 draft 1 (February 19, 2023) - initial document created. 
+>>>>>>> 5237655ebfdce677d732324797ccda150e282399
