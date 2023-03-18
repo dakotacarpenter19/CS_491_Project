@@ -4,6 +4,11 @@
  */
 package com.mycompany.checkers;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.io.IOException;
+import java.util.logging.Logger;
+
 /**
  *
  * @author wincr
@@ -55,21 +60,21 @@ public class MainMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
+                        .addGap(106, 106, 106)
                         .addComponent(startbtn)
-                        .addGap(55, 55, 55)
-                        .addComponent(exitbtn)))
-                .addContainerGap(148, Short.MAX_VALUE))
+                        .addGap(84, 84, 84)
+                        .addComponent(exitbtn))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel1)))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 182, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(startbtn)
                     .addComponent(exitbtn))
@@ -81,7 +86,14 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void startbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startbtnActionPerformed
         this.dispose();
-        Board board = new Board();
+        
+       
+       Board board = new Board();
+      
+      
+            
+            //Logger.getLogger(MainMenu.class.getName()).log(Level.SEVERE, null, ex);
+        
     }//GEN-LAST:event_startbtnActionPerformed
 
     private void exitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitbtnActionPerformed
