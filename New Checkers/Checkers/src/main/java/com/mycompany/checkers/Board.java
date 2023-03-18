@@ -54,14 +54,14 @@ public class Board extends JFrame{
                     for(int i = 0; i<8; i++){
                         for(int j = 0; j<8; j++){
                             if(isred){
-                                if(i < 4){
-                                   CPiece p = new CPiece(i, j, true, cp);
+                                if(i < 3){
+                                   CPiece p = new CPiece(j, i, true, cp);
                                   // cp.add(p);
                                   // g.drawImage(img[1], i*64, j*64, this);
                                     
                                 }
-                                if(i>5){
-                                    CPiece p = new CPiece(i,j,false,cp);
+                                if(i>4){
+                                    CPiece p = new CPiece(j, i,false,cp);
                                     //cp.add(p);
                                    // g.drawImage(img[0], i*64, j*64, this);
                                 }
