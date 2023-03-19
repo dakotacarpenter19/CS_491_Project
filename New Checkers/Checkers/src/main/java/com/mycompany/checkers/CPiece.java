@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author wincr
+ * @author Austin Winters, Dakota Carpenter
  */
 public class CPiece {
     private int ypos;
@@ -42,7 +42,7 @@ public class CPiece {
     }
     public void setKing(boolean x){
         
-        this.isKing = true;
+        this.isKing = x;
                 
     }
     public boolean getKing(){

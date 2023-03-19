@@ -11,7 +11,8 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author wincr
+ * @author Dakota Carpenter, Austin Winters
+ * Dakota did the Main Menu.
  */
 public class MainMenu extends javax.swing.JFrame {
 
