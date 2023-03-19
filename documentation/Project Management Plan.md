@@ -1,7 +1,7 @@
 # <p align="right">Project Management Plan</br><br>for<br></br>Checkers</p>
 
 
-### <p align="right">Version 1.0 draft 1<br></br>Prepared by Dakota Carpenter and Austin Winters<br></br>WIU CS 492 Software Engineering II<br></br>2.19.23</div>
+### <p align="right">Version 1.0 draft 1<br></br>Prepared by Dakota Carpenter and Austin Winters<br></br>WIU CS 492 Software Engineering II<br></br>3.20.23</div>
 
 ## Table of Contents
 
@@ -60,7 +60,7 @@
 This Project Management Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Checkers will have and others that are crucial to the software.
 
 ### 1.2. Project Deliverables
-Deliverable: Checkers V1.0 Recipient: Professor Glaue Delivery Date: 3/31/23 Delivery Method: Online distribution
+Deliverable: Checkers V1.1 Recipient: Professor Glaue Delivery Date: 3/20/23 Delivery Method: Online distribution
 
 ### 1.3. References
 Checkers Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
@@ -74,7 +74,7 @@ The evolution of this plan will occur if any unforeseen requirements come up in 
 Users of the software can contact us via our email addresses for questions.
 
 ### 2.2. Internal Structure
-Dakota and Austin are both owners of the software. Currently, we do not have specifically defined roles other than project manager which will be defined in the next section.
+Dakota and Austin are both owners of the software. Currently, we do not have specifically defined roles other than project manager and Software Lead which will be defined in the next section.
 
 ### 2.3. Roles and Responsibilities
 Project Manager (Phase 1) - Dakota Carpenter</br>
@@ -159,5 +159,4 @@ Improved usage of GitHub: We will be keeping track of bugs/problems on GitHub ra
 <<<<<<< HEAD
 Version 1.0 draft 1 (February 19, 2023) - initial document created. 
 =======
-Version 1.0 draft 1 (February 19, 2023) - initial document created. 
->>>>>>> 5237655ebfdce677d732324797ccda150e282399
+Verison 1.1 draft 2 (March 19, 2023) - updated some formatting and information relating to phase 2. 
