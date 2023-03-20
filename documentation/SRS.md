@@ -174,9 +174,9 @@ Under construction.
 
 ![LOC Diagram](diagrams/LOC.JPG)
 
-![New Start Menu](New Checkers/Checkers/images/92F81DFD-B8BF-4878-8AB0-1276AB5CB896.png)
+![New Start Menu](diagrams/Checkers_Welcome.png)
 
-![New Board](New Checkers/Checkers/images/7D8ACF50-8480-4830-8D3B-E59C23C6D0A3.png)
+![New Board](Checkers_Board.png)
 
 # Appendix C: Issues List
 Potential requirements issues that remain to be solved: 
