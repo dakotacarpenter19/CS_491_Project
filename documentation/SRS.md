@@ -176,7 +176,7 @@ Under construction.
 
 ![New Start Menu](diagrams/Checkers_Welcome.png)
 
-![New Board](Checkers_Board.png)
+![New Board](diagrams/Checkers_Board.png)
 
 # Appendix C: Issues List
 Potential requirements issues that remain to be solved: 
