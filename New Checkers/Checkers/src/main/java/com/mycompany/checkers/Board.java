@@ -5,7 +5,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
-
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.LinkedList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -16,10 +18,11 @@ import javax.swing.JPanel;
  */
 public class Board extends JFrame{
     
+	public static LinkedList<CPiece> cp = new LinkedList<>();
+	public static CPiece selectedPiece = null;
+	
     public Board(){
-            LinkedList<CPiece> cp = new LinkedList<>();
            
-          
           //image array and images by Dakota Carpenter
            Image[] img = new Image[4];
            img[0] = Toolkit.getDefaultToolkit().getImage("images/piece_black.png");
@@ -27,9 +30,6 @@ public class Board extends JFrame{
            img[2] = Toolkit.getDefaultToolkit().getImage("images/piece_red_king.png");
            img[3] = Toolkit.getDefaultToolkit().getImage("images/piece_black_king.png");
         
-          
-              
-          
             JFrame frame = new JFrame();
             frame.setBounds(10, 10, 526, 551);
             frame.setTitle("Checkers");
@@ -88,19 +88,70 @@ public class Board extends JFrame{
     
             }
     
-            
             };
             frame.add(panel);
-          
             
+            frame.addMouseMotionListener(new MouseMotionListener() {
+            	@Override
+            	public void mouseDragged(MouseEvent e) {
+            		if (selectedPiece != null) {
+            			selectedPiece.setX(e.getX());
+            			selectedPiece.setY(e.getY());
+            		}
+            	}
+            	
+            	@Override
+            	public void mouseMoved(MouseEvent e) {
+            		
+            	}
+            });
+            
+            frame.addMouseListener(new MouseListener() {
+            	@Override
+            	public void mouseClicked(MouseEvent e) {
+            		
+            	}
+            	
+            	@Override
+            	public void mousePressed(MouseEvent e) {
+            		System.out.println(getPiece(e.getX(), e.getY()));
+            		selectedPiece = getPiece(e.getX(), e.getY());
+            	}
+            	
+            	@Override
+            	public void mouseReleased(MouseEvent e) {
+            		selectedPiece.move(e.getX() / 64, e.getY() / 64);
+            		frame.repaint();
+            	}
+            	
+            	@Override
+            	public void mouseEntered(MouseEvent e) {
+            		
+            	}
+            	
+            	@Override
+            	public void mouseExited(MouseEvent e) {
+            		
+            	}
+            });
+          
             frame.setDefaultCloseOperation(3);
             
             frame.setVisible(true);
-             
 
-    
-         
      }
+    
+    public static CPiece getPiece(int x, int y) {
+    	int xp = x / 64;
+    	int yp = y / 64;
+    	
+    	for (CPiece p: cp) {
+    		if (p.getX() == xp && p.getY() == yp) {
+    			return p;
+    		}
+    	}
+    	return null;
+    }
     
     /*private JButton exit(){
             JButton endGame = new JButton();

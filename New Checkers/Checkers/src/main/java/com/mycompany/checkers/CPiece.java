@@ -40,6 +40,15 @@ public class CPiece {
     
         return ypos;
     }
+    
+    public void setX(int x) {
+    	xpos = x;
+    }
+    
+    public void setY(int y) {
+    	ypos = y;
+    }
+    
     public void setKing(boolean x){
         
         this.isKing = x;
@@ -52,6 +61,14 @@ public class CPiece {
     }
     public void move(int xp, int yp){
     
+    	for (CPiece c : cp) {
+    		if (c.getX() == xp && c.getY() == yp) {
+    			c.destroy();
+    		}
+    	}
+    	this.xpos = xp;
+    	this.ypos = yp;
+    	
         //TODO add move function
         // needs to check for jumpable piece. Maybe add an isJumpable method? 
     
