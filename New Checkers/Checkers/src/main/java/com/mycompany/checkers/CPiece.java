@@ -11,16 +11,18 @@ import java.util.LinkedList;
  * @author Austin Winters, Dakota Carpenter
  */
 public class CPiece {
-    private int ypos;
-    private int xpos;
-    private boolean isRed;
-    private boolean isKing = false;
+    int xpos, ypos, x, y;
+    
+    boolean isRed;
+    boolean isKing = false;
     String image;
     LinkedList<CPiece> cp;
     
     public CPiece(int xpos, int ypos, boolean isRed, LinkedList<CPiece> cp){
         this.xpos = xpos;
         this.ypos = ypos;
+        x = xpos * 50;
+        y = ypos * 50;
         this.isRed = isRed;
         this.cp = cp;
         cp.add(this);
@@ -59,17 +61,23 @@ public class CPiece {
         return this.isKing;
     
     }
-    public void move(int xp, int yp){
-    
-    	for (CPiece c : cp) {
-    		if (c.getX() == xp && c.getY() == yp) {
-    			c.destroy();
+    public void move(int xpos, int ypos){
+    	
+    	if (Board.getPiece(xpos * 50, ypos * 50) != null) {
+    		if (Board.getPiece(xpos * 50, ypos * 50).isRed != isRed) {
+    			Board.getPiece(xpos * 50, ypos * 50).destroy();
+    		} else {
+    			x = this.xpos * 50;
+    			y = this.ypos * 50;
+    			return;
     		}
     	}
-    	this.xpos = xp;
-    	this.ypos = yp;
     	
-        //TODO add move function
+    	this.xpos = xpos;
+    	this.ypos = ypos;
+    	x = xpos * 50;
+    	y = ypos * 50;
+    	
         // needs to check for jumpable piece. Maybe add an isJumpable method? 
     
     }
@@ -94,10 +102,8 @@ public class CPiece {
     public void destroy(){
         
         //need to add adjacent check to see if it is a legal jump.
-        
         cp.remove(this);
         
     }
-   
-    
+  
 }
