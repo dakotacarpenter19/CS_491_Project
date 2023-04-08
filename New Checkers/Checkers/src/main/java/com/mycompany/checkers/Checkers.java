@@ -8,7 +8,7 @@ package com.mycompany.checkers;
 public class Checkers {
 
     public static void main(String[] args) {
-        MainMenu g = new MainMenu();
+       MainMenu g = new MainMenu();
        g.setVisible(true);
     }
 }

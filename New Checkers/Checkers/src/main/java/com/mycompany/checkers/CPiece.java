@@ -15,6 +15,8 @@ public class CPiece {
     private int xpos;
     private boolean isRed;
     private boolean isKing = false;
+    private int x;
+    private int y;
     String image;
     LinkedList<CPiece> cp;
     
@@ -23,6 +25,8 @@ public class CPiece {
         this.ypos = ypos;
         this.isRed = isRed;
         this.cp = cp;
+        this.x = xpos*64;
+        this.y = ypos*64;
         cp.add(this);
         setImage(isRed);
     
@@ -32,15 +36,6 @@ public class CPiece {
         return isRed;
     
     }
-    public int getX(){
-    
-    return xpos;
-    }
-    public int getY(){
-    
-        return ypos;
-    }
-    
     public void setX(int x) {
     	xpos = x;
     }
@@ -48,7 +43,14 @@ public class CPiece {
     public void setY(int y) {
     	ypos = y;
     }
+    public int getX(){
     
+    return this.x;
+    }
+    public int getY(){
+    
+        return this.y;
+    }
     public void setKing(boolean x){
         
         this.isKing = x;
@@ -60,15 +62,18 @@ public class CPiece {
     
     }
     public void move(int xp, int yp){
-    
-    	for (CPiece c : cp) {
-    		if (c.getX() == xp && c.getY() == yp) {
-    			c.destroy();
-    		}
+  	for (CPiece c : cp) {
+            if (c.getX() == xp && c.getY() == yp) {
+    		c.destroy();
+            }
     	}
     	this.xpos = xp;
     	this.ypos = yp;
-    	
+        this.x = xp*64;
+        this.y = yp*64;
+        
+        
+        
         //TODO add move function
         // needs to check for jumpable piece. Maybe add an isJumpable method? 
     
