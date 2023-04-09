@@ -11,10 +11,12 @@ package com.mycompany.checkers;
 public class Game {
     private boolean validate;
     private boolean isFull;
+    private boolean pdestroy;
+   
     public Game(){
-    this.validate = false;
-    this.isFull = false;
-    
+        this.validate = false;
+        this.isFull = false;
+        this.pdestroy = false;
     }
     public boolean validMove(int x, int y){
         
@@ -134,5 +136,11 @@ public class Game {
         }
         return this.isFull;
     }
-    
+    public boolean destroyPiece(int x1, int y1, int x2, int y2){
+            
+            if((x1 == 3 && y1 == 5) && (x2 == 1 && y2 == 3)){
+                   pdestroy = true; 
+            }
+         return pdestroy;   
+    }
 }

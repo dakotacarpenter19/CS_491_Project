@@ -151,7 +151,21 @@ public class Board extends JFrame{
                           selectedPiece.move(e.getX() / 64, e.getY() / 64);
                           
                           arr[selectedPiece.getX()/64][selectedPiece.getY()/64] = selectedPiece.getColor();
+                            
                           arr[x][y] = "O";
+                          
+                          if(game.destroyPiece(x, y, selectedPiece.getX()/64, selectedPiece.getY()/64) == true && arr[2][4].contains("R")){
+                              for(CPiece p: cp){
+                                  if((p.getX()/64) == 2 && (p.getY()/64) == 4){
+                                     
+                                      p.destroy();
+                                  
+                                  }
+                              
+                              }
+                          
+                          }
+                          
                         }
                         else{
                             System.out.println(arr[selectedPiece.getX()/64][selectedPiece.getY()/64]);
@@ -186,7 +200,7 @@ public class Board extends JFrame{
     	
     	for (CPiece p: cp) {
     		if ((p.getX() / 64) == xp && (p.getY() / 64) == yp) {
-    			return p;
+                    return p;
     		}
     	}
     	return null;
