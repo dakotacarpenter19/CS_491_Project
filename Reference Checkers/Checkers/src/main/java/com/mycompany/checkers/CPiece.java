@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * @author Austin Winters, Dakota Carpenter
  */
 public class CPiece {
-    private int ypos, x, y, xpos;
+    private int xpos, ypos, x, y;
     
     private boolean isRed;
     private boolean isKing = false;

@@ -2,6 +2,7 @@
 package com.mycompany.checkers;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -10,6 +11,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import com.mycompany.checkers.Game;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,8 +22,22 @@ import javax.swing.JPanel;
  */
 public class Board extends JFrame{
            public static LinkedList<CPiece> cp = new LinkedList<>();
-           public static CPiece selectedPiece = null;
+//           public static CPiece selectedPiece = null;
            String[][] arr = new String[8][8];
+           
+           private int selectedRow = -1;
+           private int selectedCol = -1;
+           private int[][] board = {
+        		   {1, 0, 1, 0, 1, 0, 1, 0},
+        		   {0, 1, 0, 1, 0, 1, 0, 1},
+        		   {1, 0, 1, 0, 1, 0, 1, 0},
+        		   {0, 0, 0, 0, 0, 0, 0, 0},
+        		   {0, 0, 0, 0, 0, 0, 0, 0},
+        		   {0, 2, 0, 2, 0, 2, 0, 2},
+        		   {2, 0, 2, 0, 2, 0, 2, 0},
+        		   {0, 2, 0, 2, 0, 2, 0, 2},
+           };
+           
     public Board(){
         Game game = new Game();
           for(int i = 0; i < 8; i++ ){
@@ -54,18 +70,31 @@ public class Board extends JFrame{
                 public void paint(Graphics g){
                     
                    // CPiece p2 = new CPiece(0, 1, true, cp);
+                	
+                	int c = 0;
+                	
+                	for (int a = 0; a < board.length; a++) {
+                		for (int b = 0; b < board[0].length; b++) {
+                			if (board[a][b] == 1) {
+                				CPiece p = new CPiece(b, a, true, cp);
+                			} else if (board[a][b] == 2) {
+                				CPiece p = new CPiece(b, a, false, cp);
+                			}
+                		}
+                	}
+                	
                    int ind = 0;
                     boolean isred = true;
                     for(int i = 0; i<8; i++){
                         for(int j = 0; j<8; j++){
                             if(isred){
                                 if(i < 3){
-                                   CPiece p = new CPiece(j, i, true, cp);
+//                                   CPiece p = new CPiece(j, i, true, cp);
                                      arr[j][i] = "R";
                                     
                                 }
                                 if(i>4){
-                                   CPiece p = new CPiece(j, i,false,cp);
+//                                   CPiece p = new CPiece(j, i,false, cp);
                                    arr[j][i] = "B";
                                 }
                                
@@ -103,18 +132,18 @@ public class Board extends JFrame{
             
             };
             
-           
+//           setPreferredSize(new Dimension(400, 400));
             
            frame.addMouseMotionListener(new MouseMotionListener() {
             
             	@Override
             	public void mouseDragged(MouseEvent e) {
-            		if (selectedPiece != null) {
-                               
-            			selectedPiece.setX(e.getX()-32);
-            			selectedPiece.setY(e.getY()-32);
-                                 frame.repaint();
-            		}
+//            		if (selectedPiece != null) {
+//                               
+//            			selectedPiece.setX(e.getX()-32);
+//            			selectedPiece.setY(e.getY()-32);
+//                                 frame.repaint();
+//            		}
             	}
             	
             	@Override
@@ -129,15 +158,35 @@ public class Board extends JFrame{
             	@Override
             	public void mouseClicked(MouseEvent e) {
             		//selectedPiece = getPiece(e.getX(), e.getY());
-                        System.out.println(arr[e.getX()/64][e.getY()/64]);
+            		
+            		int squareSize = 64;
+            		int row = e.getY() / squareSize;
+            		int col = e.getX() / squareSize;
+            		
+            		if (row < 0 || row >= 8 || col < 0 || col >= 8 ) {
+            			return;
+            		}
+            		
+            		if (selectedRow == -1 && board[row][col] != 0) {
+            			selectedRow = row;
+            			selectedCol = col;
+            		} else if (selectedRow != -1) {
+            			board[row][col] = board [selectedRow][selectedCol];
+            			board[selectedRow][selectedCol] = 0;
+            		}
+            		
+            		repaint();
+            		
+            		System.out.println(Arrays.deepToString(board));
+//            		System.out.println(arr[e.getX()/64][e.getY()/64]);
             	}
             	
             	@Override
             	public void mousePressed(MouseEvent e) {
-            		System.out.println(getPiece(e.getX(), e.getY()));
-                        x = e.getX() / 64;
-                        y = e.getY() / 64;
-            		selectedPiece = getPiece(e.getX(), e.getY());
+//            		System.out.println(getPiece(e.getX(), e.getY()));
+//                        x = e.getX() / 64;
+//                        y = e.getY() / 64;
+//            		selectedPiece = getPiece(e.getX(), e.getY());
                         
                         frame.repaint();
             	}
@@ -145,37 +194,37 @@ public class Board extends JFrame{
             	@Override
             	public void mouseReleased(MouseEvent e) {
                       
-                    if(game.validMove((e.getX()/64), (e.getY()/64)) == true){
-                           
-                        if(arr[e.getX()/64][e.getY()/64].contains("O")){                      
-                          selectedPiece.move(e.getX() / 64, e.getY() / 64);
-                          
-                          arr[selectedPiece.getX()/64][selectedPiece.getY()/64] = selectedPiece.getColor();
-                            
-                          arr[x][y] = "O";
-                          
-                          if(game.destroyPiece(x, y, selectedPiece.getX()/64, selectedPiece.getY()/64) == true && arr[2][4].contains("R")){
-                              for(CPiece p: cp){
-                                  if((p.getX()/64) == 2 && (p.getY()/64) == 4){
-                                     
-                                      p.destroy();
-                                  
-                                  }
-                              
-                              }
-                          
-                          }
-                          
-                        }
-                        else{
-                            System.out.println(arr[selectedPiece.getX()/64][selectedPiece.getY()/64]);
-                        }
-                    }
-                    else{
-                        System.out.println("invalid move.");
-                    }
-                        System.out.println((selectedPiece.getX() / 64 )+","+ (selectedPiece.getY()/64));
-            		frame.repaint();
+//                    if(game.validMove((e.getX()/64), (e.getY()/64)) == true){
+//                           
+//                        if(arr[e.getX()/64][e.getY()/64].contains("O")){                      
+//                          selectedPiece.move(e.getX() / 64, e.getY() / 64);
+//                          
+//                          arr[selectedPiece.getX()/64][selectedPiece.getY()/64] = selectedPiece.getColor();
+//                            
+//                          arr[x][y] = "O";
+//                          
+//                          if(game.destroyPiece(x, y, selectedPiece.getX()/64, selectedPiece.getY()/64) == true && arr[2][4].contains("R")){
+//                              for(CPiece p: cp){
+//                                  if((p.getX()/64) == 2 && (p.getY()/64) == 4){
+//                                     
+//                                      p.destroy();
+//                                  
+//                                  }
+//                              
+//                              }
+//                          
+//                          }
+//                          
+//                        }
+//                        else{
+//                            System.out.println(arr[selectedPiece.getX()/64][selectedPiece.getY()/64]);
+//                        }
+//                    }
+//                    else{
+//                        System.out.println("invalid move.");
+//                    }
+//                        System.out.println((selectedPiece.getX() / 64 )+","+ (selectedPiece.getY()/64));
+//            		frame.repaint();
             	}
             	
             	@Override
@@ -205,6 +254,17 @@ public class Board extends JFrame{
     	}
     	return null;
     }
+    
+//    private static class CheckersMove {
+//    	int fromRow, fromCol;
+//    	int toRow, toCol;
+//    	CheckersMove(int r1, int c1, int r2, int c2) {
+//    		fromRow = r1;
+//    		fromCol = c1;
+//    		toRow = r2;
+//    		toCol = c2;
+//    	}
+//    }
  
           
             
