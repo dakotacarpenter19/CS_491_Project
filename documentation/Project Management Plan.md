@@ -1,7 +1,7 @@
 # <p align="right">Project Management Plan</br><br>for<br></br>Checkers</p>
 
 
-### <p align="right">Version 1.0 draft 1<br></br>Prepared by Dakota Carpenter and Austin Winters<br></br>WIU CS 492 Software Engineering II<br></br>3.20.23</div>
+### <p align="right">Version 1.2<br></br>Prepared by Dakota Carpenter and Austin Winters<br></br>WIU CS 492 Software Engineering II<br></br>3.20.23</div>
 
 ## Table of Contents
 
@@ -60,7 +60,7 @@
 This Project Management Plan is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including but not limited to game mechanics, user interface, and user experience. The Project Management Plan list includes all characteristics Checkers will have and others that are crucial to the software.
 
 ### 1.2. Project Deliverables
-Deliverable: Checkers V1.1 Recipient: Professor Glaue Delivery Date: 3/20/23 Delivery Method: Online distribution
+Deliverable: Checkers V1.1 Recipient: Professor Glaue Delivery Date: 4/10/23 Delivery Method: Online distribution
 
 ### 1.3. References
 Checkers Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
@@ -77,8 +77,8 @@ Users of the software can contact us via our email addresses for questions.
 Dakota and Austin are both owners of the software. Currently, we do not have specifically defined roles other than project manager and Software Lead which will be defined in the next section.
 
 ### 2.3. Roles and Responsibilities
-Project Manager (Phase 1) - Dakota Carpenter</br>
-Software Lead (Phase 1) - Austin Winters
+Project Manager (Phase 2) - Dakota Carpenter</br>
+Software Lead (Phase 2) - Austin Winters
 
 ## 3. Managerial Process Plans
 
@@ -129,7 +129,6 @@ The project manager and lead programmer will be meeting face to face. Email will
 ### 3.4. Issue Resolution Plan
 =======
 ### 3.5. Issue Resolution Plan
->>>>>>> 5237655ebfdce677d732324797ccda150e282399
 We will document project issues through the projects GitHub repository. The project manager will have the final say in decisions for the project. The lead programmer will be in charge of any changes needed in the software and will have final decision concerning software features.
 
 ## 4. Technical Process Plan
@@ -156,7 +155,7 @@ We will be making a simple set of game instructions based off of information on 
 Improved usage of GitHub: We will be keeping track of bugs/problems on GitHub rather than communicating them verbally or through email. 
 
 ## Revision History
-<<<<<<< HEAD
+
 Version 1.0 draft 1 (February 19, 2023) - initial document created. 
 =======
-Verison 1.1 draft 2 (March 19, 2023) - updated some formatting and information relating to phase 2. 
+Verison 1.2 draft 3 (April 10, 2023) - updated some formatting and information relating to phase 2 (iterative 2). 
