@@ -11,10 +11,10 @@ import java.util.LinkedList;
  * @author Austin Winters, Dakota Carpenter
  */
 public class CPiece {
-    private int xpos, ypos, x, y;
+    int xpos, ypos, x, y;
     
-    private boolean isRed;
-    private boolean isKing = false;
+    boolean isRed;
+    boolean isKing = false;
     private String color;
 
     String image;
@@ -24,16 +24,17 @@ public class CPiece {
         this.xpos = xpos;
         this.ypos = ypos;
         this.isRed = isRed;
-        if(isRed){
-            this.color = "R";
+        x = xpos * 64;
+        y = ypos * 64;
         
-        }
-        else{
-            this.color = "B";
-        }
+//        if(isRed){
+//            this.color = "R";
+//        
+//        }
+//        else{
+//            this.color = "B";
+//        }
         this.cp = cp;
-        this.x = xpos*64;
-        this.y = ypos*64;
         cp.add(this);
         setImage(isRed);
     
@@ -44,11 +45,11 @@ public class CPiece {
     
     }
     public void setX(int x) {
-    	xpos = x*64;
+    	xpos = x;
     }
     
     public void setY(int y) {
-    	ypos = y*64;
+    	ypos = y;
     }
     public int getX(){
     
