@@ -22,7 +22,6 @@ import javax.swing.JPanel;
  */
 public class Board extends JFrame{
            public static LinkedList<CPiece> cp = new LinkedList<>();
-//           public static CPiece selectedPiece = null;
            String[][] arr = new String[8][8];
            
            private int selectedRow = -1;
@@ -43,9 +42,7 @@ public class Board extends JFrame{
           for(int i = 0; i < 8; i++ ){
               for(int j = 0; j<8; j++){
                   arr[j][i] = "O";
-              
               }
-          
           }
           //image array and images by Dakota Carpenter
            Image[] img = new Image[4];
@@ -65,8 +62,6 @@ public class Board extends JFrame{
                 
                 @Override
                 public void paint(Graphics g){
-                    
-                	
                 	boolean isred = true;
                 	
                 	for (int a = 0; a < board.length; a++) {
@@ -77,7 +72,6 @@ public class Board extends JFrame{
                 			} else {
                 				g.setColor(Color.BLACK);
                 			}
-                			
                 			g.fillRect(b * 64, a * 64, 64, 64);
                 			
                 			if (board[a][b] == 1) {
@@ -90,45 +84,25 @@ public class Board extends JFrame{
                 				g.fillOval(b * 64 + 16, a * 64 + 16, 32, 32);
                 			} else if (board[a][b] == 0) {
                 				g.setColor(Color.red);
-//                				g.fillRect(a * 64, b * 64, 64, 64);
-//                				System.out.println("Testing");
                 			}
                 			
                 			if (a == selectedRow && b == selectedCol) {
                 				g.setColor(Color.GREEN);
                 				g.drawRect(b * 64, a * 64, 63, 63);
                 			}
-                			
-//                			if (isred) {
-//                				g.setColor(Color.white);
-//                			} else {
-//                				g.setColor(Color.black);
-//                			}
-                			
-                			
-//                			isred = !isred;
-                			
                 		}
-                		
-//                		isred = !isred;
                 	}
                 	
                 	int ind = 0;
                 	for(CPiece p : cp){
                         if(p.isRed()){
                             ind = 1;
-                        
                         }
                         else{
                             ind = 0;
-                        
                         }
-//                        g.drawImage(img[ind], p.xpos * 64, p.ypos * 64, this);
-                    
                     }
-             
                 }
-            
             };
             
             frame.add(panel);
@@ -137,12 +111,6 @@ public class Board extends JFrame{
             
             	@Override
             	public void mouseDragged(MouseEvent e) {
-//            		if (selectedPiece != null) {
-//                               
-//            			selectedPiece.setX(e.getX()-32);
-//            			selectedPiece.setY(e.getY()-32);
-//                                 frame.repaint();
-//            		}
             	}
             	
             	@Override
@@ -156,8 +124,6 @@ public class Board extends JFrame{
                 int y;
             	@Override
             	public void mouseClicked(MouseEvent e) {
-            		//selectedPiece = getPiece(e.getX(), e.getY());
-            		
             		int squareSize = 64;
             		int row = e.getY() / squareSize;
             		int col = e.getX() / squareSize;
@@ -165,85 +131,45 @@ public class Board extends JFrame{
             		if (row < 0 || row >= 8 || col < 0 || col >= 8 ) {
             			return;
             		}
-            		
             		if (selectedRow == -1 && board[row][col] != 0) {
             			selectedRow = row;
             			selectedCol = col;
-            			repaint();
             		} else if (selectedRow != -1) {
             			board[row][col] = board[selectedRow][selectedCol];
             			board[selectedRow][selectedCol] = 0;
-            			repaint();
+            			selectedRow = -1;
+            			selectedCol = -1;
             		} 
             		
-            		repaint();
+            		frame.repaint();
+//            		repaint();
             		
-            		System.out.println(Arrays.deepToString(board));
-//            		System.out.println(arr[e.getX()/64][e.getY()/64]);
+//            		System.out.println(Arrays.deepToString(board));
             	}
             	
             	@Override
             	public void mousePressed(MouseEvent e) {
-//            		System.out.println(getPiece(e.getX(), e.getY()));
-//                        x = e.getX() / 64;
-//                        y = e.getY() / 64;
-//            		selectedPiece = getPiece(e.getX(), e.getY());
-                        
                         frame.repaint();
             	}
             	
             	@Override
-            	public void mouseReleased(MouseEvent e) {
-                      
-//                    if(game.validMove((e.getX()/64), (e.getY()/64)) == true){
-//                           
-//                        if(arr[e.getX()/64][e.getY()/64].contains("O")){                      
-//                          selectedPiece.move(e.getX() / 64, e.getY() / 64);
-//                          
-//                          arr[selectedPiece.getX()/64][selectedPiece.getY()/64] = selectedPiece.getColor();
-//                            
-//                          arr[x][y] = "O";
-//                          
-//                          if(game.destroyPiece(x, y, selectedPiece.getX()/64, selectedPiece.getY()/64) == true && arr[2][4].contains("R")){
-//                              for(CPiece p: cp){
-//                                  if((p.getX()/64) == 2 && (p.getY()/64) == 4){
-//                                     
-//                                      p.destroy();
-//                                  
-//                                  }
-//                              
-//                              }
-//                          
-//                          }
-//                          
-//                        }
-//                        else{
-//                            System.out.println(arr[selectedPiece.getX()/64][selectedPiece.getY()/64]);
-//                        }
-//                    }
-//                    else{
-//                        System.out.println("invalid move.");
-//                    }
-//                        System.out.println((selectedPiece.getX() / 64 )+","+ (selectedPiece.getY()/64));
-//            		frame.repaint();
-            	}
+            	public void mouseReleased(MouseEvent e) {}
             	
             	@Override
-            	public void mouseEntered(MouseEvent e) {
-            		
-            	}
+            	public void mouseEntered(MouseEvent e) {}
             	
             	@Override
-            	public void mouseExited(MouseEvent e) {
-            		
-            	}
+            	public void mouseExited(MouseEvent e) {}
             });
+            
             frame.add(panel);
             frame.setDefaultCloseOperation(3);
             
             frame.setVisible(true);
 
      }
+    
+    // currently not used
     public static CPiece getPiece(int x, int y) {
     	int xp = x / 64;
     	int yp = y / 64;
@@ -256,25 +182,9 @@ public class Board extends JFrame{
     	return null;
     }
     
-//    private static class CheckersMove {
-//    	int fromRow, fromCol;
-//    	int toRow, toCol;
-//    	CheckersMove(int r1, int c1, int r2, int c2) {
-//    		fromRow = r1;
-//    		fromCol = c1;
-//    		toRow = r2;
-//    		toCol = c2;
-//    	}
-//    }
- 
-          
-            
         //    frame.setDefaultCloseOperation(3);            
           // frame.setVisible(true);
-             
-
-    
-         
+ 
      }
     
     /*private JButton exit(){
@@ -287,5 +197,3 @@ public class Board extends JFrame{
             endGame.setVisible(true);
             return endGame;
     }*/
-  
-

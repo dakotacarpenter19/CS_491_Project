@@ -27,13 +27,6 @@ public class CPiece {
         x = xpos * 64;
         y = ypos * 64;
         
-//        if(isRed){
-//            this.color = "R";
-//        
-//        }
-//        else{
-//            this.color = "B";
-//        }
         this.cp = cp;
         cp.add(this);
         setImage(isRed);
@@ -88,9 +81,7 @@ public class CPiece {
     	this.ypos = yp;
         this.x = xp*64;
         this.y = yp*64;
-        
-        
-        
+  
         //TODO add move function
         // needs to check for jumpable piece. Maybe add an isJumpable method? 
     
