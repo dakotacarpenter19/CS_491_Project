@@ -54,6 +54,7 @@ public class Board extends JFrame{
             JFrame frame = new JFrame();
             frame.setBounds(10, 10, 526, 551);
             frame.setTitle("Checkers");
+            frame.setResizable(false);
             
             // need to add an exit button and restart button to rebuild the board.
             //may be able to use esc key to exit game and a popup window to declare winner and restart.
@@ -125,9 +126,12 @@ public class Board extends JFrame{
             	@Override
             	public void mouseClicked(MouseEvent e) {
             		int squareSize = 64;
-            		int row = e.getY() / squareSize;
-            		int col = e.getX() / squareSize;
-            		
+            		 int col, row;
+                       
+                             row = e.getY() / squareSize;
+                             col = e.getX() / squareSize;
+                        
+                       if(game.validMove(col, row)){      
             		if (row < 0 || row >= 8 || col < 0 || col >= 8 ) {
             			return;
             		}
@@ -140,7 +144,7 @@ public class Board extends JFrame{
             			selectedRow = -1;
             			selectedCol = -1;
             		} 
-            		
+                       }
             		frame.repaint();
 //            		repaint();
             		
