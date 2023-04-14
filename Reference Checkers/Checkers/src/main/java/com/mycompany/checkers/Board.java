@@ -2,19 +2,19 @@
 package com.mycompany.checkers;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import com.mycompany.checkers.Game;
-
-import java.util.Arrays;
 import java.util.LinkedList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.awt.Dimension;
+
+//import java.util.Arrays;
+//import com.mycompany.checkers.Game;
 
 /**
  *
@@ -111,13 +111,10 @@ public class Board extends JFrame{
            frame.addMouseMotionListener(new MouseMotionListener() {
             
             	@Override
-            	public void mouseDragged(MouseEvent e) {
-            	}
+            	public void mouseDragged(MouseEvent e) {}
             	
             	@Override
-            	public void mouseMoved(MouseEvent e) {
-            		
-            	}
+            	public void mouseMoved(MouseEvent e) {}
             });
 
             frame.addMouseListener(new MouseListener() {
@@ -170,34 +167,29 @@ public class Board extends JFrame{
             frame.setDefaultCloseOperation(3);
             
             frame.setVisible(true);
-
      }
     
     // currently not used
     public static CPiece getPiece(int x, int y) {
-    	int xp = x / 64;
-    	int yp = y / 64;
-    	
-    	for (CPiece p: cp) {
-    		if ((p.getX() / 64) == xp && (p.getY() / 64) == yp) {
-                    return p;
-    		}
-    	}
-    	return null;
-    }
-    
-        //    frame.setDefaultCloseOperation(3);            
-          // frame.setVisible(true);
- 
-     }
-    
-    /*private JButton exit(){
-            JButton endGame = new JButton();
-    
-            endGame.setPreferredSize(new Dimension(91, 25));
-            //endGame.setMaximumSize(new Dimension(91, 25));
-            endGame.setAlignmentX(10);
-            endGame.setAlignmentY(-10);
-            endGame.setVisible(true);
-            return endGame;
-    }*/
+		int xp = x / 64;
+		int yp = y / 64;
+
+		for (CPiece p : cp) {
+			if ((p.getX() / 64) == xp && (p.getY() / 64) == yp) {
+				return p;
+			}
+		}
+		return null;
+	}
+
+//	private JButton exit() {
+//		JButton endGame = new JButton();
+//		endGame.setPreferredSize(new Dimension(91, 25));
+//		endGame.setMaximumSize(new Dimension(91, 25));
+//		endGame.setAlignmentX(10);
+//		endGame.setAlignmentY(-10);
+//		endGame.setVisible(true);
+//		return endGame;
+//	}
+
+}
