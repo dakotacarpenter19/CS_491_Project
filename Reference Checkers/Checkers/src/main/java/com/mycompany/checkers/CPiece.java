@@ -64,16 +64,14 @@ public class CPiece {
             if(Board.getPiece(xp*64, yp*64).isRed() != isRed){
                 if(Board.getPiece(xp*64, yp*64).getX() != this.getX() && Board.getPiece(xp*64, yp*64).getY() != this.getY() )
                      Board.getPiece(xp*64, yp*64).destroy();
-            
             }
             else{
               this.x = xp*64;
               this.y = yp*64;
               return;
-            
             }
-
         }
+
     	this.xpos = xp;
     	this.ypos = yp;
         this.x = xp*64;
@@ -86,19 +84,14 @@ public class CPiece {
     private void setImage(boolean x){
     
         if(x){
-            
            image = "/images/piece_red.png";
-            
         }
         else{
-            
             image = "/images/piece_black.png";
-        
         }
-    
     }
+
     public String getImage(){
-    
         return image;
     }
     public void destroy(){
@@ -106,12 +99,9 @@ public class CPiece {
         //need to add adjacent check to see if it is a legal jump.
         
         cp.remove(this);
-        
     }
-    public String getColor(){
     
+    public String getColor(){
         return this.color;
     }
-   
-    
 }
