@@ -39,25 +39,26 @@ public class Board extends JFrame{
            
     public Board(){
         Game game = new Game();
-          for(int i = 0; i < 8; i++ ){
-              for(int j = 0; j<8; j++){
-                  arr[j][i] = "O";
-              }
-          }
-          //image array and images by Dakota Carpenter
-           Image[] img = new Image[4];
-           img[0] = Toolkit.getDefaultToolkit().getImage("images/piece_black.png");
-           img[1] = Toolkit.getDefaultToolkit().getImage("images/piece_red.png");
-           img[2] = Toolkit.getDefaultToolkit().getImage("images/piece_red_king.png");
-           img[3] = Toolkit.getDefaultToolkit().getImage("images/piece_black_king.png");
+//          for(int i = 0; i < 8; i++ ){
+//              for(int j = 0; j<8; j++){
+//                  arr[j][i] = "O";
+//              }
+//          }
+
+          	//image array and images by Dakota Carpenter
+		   	Image[] img = new Image[4];
+           	img[0] = Toolkit.getDefaultToolkit().getImage("images/piece_black.png");
+           	img[1] = Toolkit.getDefaultToolkit().getImage("images/piece_red.png");
+           	img[2] = Toolkit.getDefaultToolkit().getImage("images/piece_red_king.png");
+           	img[3] = Toolkit.getDefaultToolkit().getImage("images/piece_black_king.png");
           
-            JFrame frame = new JFrame();
-            frame.setBounds(10, 10, 526, 551);
-            frame.setTitle("Checkers");
-            frame.setResizable(false);
+		   	JFrame frame = new JFrame();
+		   	frame.setBounds(10, 10, 526, 551);
+		   	frame.setTitle("Checkers");
+		   	frame.setResizable(false);
             
-            // need to add an exit button and restart button to rebuild the board.
-            //may be able to use esc key to exit game and a popup window to declare winner and restart.
+		   	// need to add an exit button and restart button to rebuild the board.
+			//may be able to use esc key to exit game and a popup window to declare winner and restart.
             //JPanel for the displayable board and pieces by Austin Winters
             JPanel panel = new JPanel(){
                 
