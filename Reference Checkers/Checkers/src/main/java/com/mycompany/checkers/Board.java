@@ -43,8 +43,7 @@ public class Board extends JFrame {
 		JPanel panel = new JPanel() {
 			@Override
 			public void paint(Graphics g) {
-//				boolean isred = true;
-
+				// builds and paints the board
 				for (int a = 0; a < board.length; a++) {
 					for (int b = 0; b < board[a].length; b++) {
 						if ((a + b) % 2 == 0) {
@@ -85,12 +84,8 @@ public class Board extends JFrame {
 		});
 
 		frame.addMouseListener(new MouseListener() {
-			int x;
-			int y;
 			@Override
 			public void mouseClicked(MouseEvent e) {
-
-
 
 				int squareSize = 64;
 				int col, row;
@@ -98,29 +93,20 @@ public class Board extends JFrame {
 				row = e.getY() / squareSize;
 				col = e.getX() / squareSize;
 
+				/**
+				 * checks if a piece is selected
+				 * if not, selects a piece
+				 * if so, moves the selected piece
+				 */
 				if (game.getSelectedPiece() == null) {
 					game.setSelectedPiece(row, col);
 				} else {
 					game.movePiece(row, col);
 				}
 
-//				if (game.isValidMove(row, col, selectedRow, selectedCol)) {
-//					if (row < 0 || row > 7 || col < 0 || col > 7) {
-//						return;
-//					}
-//					if (selectedRow == -1 && board[row][col] != 0) {
-//						selectedRow = row;
-//						selectedCol = col;
-//					} else if (selectedRow != -1) {
-//						board[row][col] = board[selectedRow][selectedCol];
-//						board[selectedRow][selectedCol] = 0;
-//						selectedRow = -1;
-//						selectedCol = -1;
-//					}
-//				}
-
 				frame.repaint();
 
+				// "debug" message
 				System.out.println(Arrays.deepToString(board));
 
 			}
@@ -146,6 +132,7 @@ public class Board extends JFrame {
 
 	}
 
+	// might not need
 	public static CPiece getPiece(int x, int y) {
 		int xp = x / 64;
 		int yp = y / 64;
@@ -158,6 +145,7 @@ public class Board extends JFrame {
 		return null;
 	}
 
+	// not sure if necessary
 	public static int[][] getBoard() {
 		return board;
 	}

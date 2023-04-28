@@ -4,8 +4,9 @@ package com.mycompany.checkers;
 import java.util.LinkedList;
 
 /**
- *
  * @author Austin Winters, Dakota Carpenter
+ * overall not sure how much of this class is needed now since most of the piece
+ * logic is in the Game and Board classes
  */
 public class CPiece {
     int xpos, ypos, x, y;
@@ -14,7 +15,6 @@ public class CPiece {
     boolean isKing = false;
     private String color;
 
-    String image;
     LinkedList<CPiece> cp;
     
     public CPiece(int xpos, int ypos, boolean isRed, LinkedList<CPiece> cp){
@@ -26,7 +26,7 @@ public class CPiece {
         
         this.cp = cp;
         cp.add(this);
-        setImage(isRed);
+//        setImage(isRed);
     
     }
     public boolean isRed(){
@@ -81,19 +81,7 @@ public class CPiece {
         // needs to check for jumpable piece. Maybe add an isJumpable method? 
     
     }
-    private void setImage(boolean x){
-    
-        if(x){
-           image = "/images/piece_red.png";
-        }
-        else{
-            image = "/images/piece_black.png";
-        }
-    }
 
-    public String getImage(){
-        return image;
-    }
     public void destroy(){
         
         //need to add adjacent check to see if it is a legal jump.
