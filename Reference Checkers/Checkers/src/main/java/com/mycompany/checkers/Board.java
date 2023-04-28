@@ -99,15 +99,17 @@ public class Board extends JFrame {
 				 * if so, moves the selected piece
 				 */
 				if (game.getSelectedPiece() == null) {
+					System.out.println("Piece is selected");
 					game.setSelectedPiece(row, col);
 				} else {
+					System.out.println("Piece is moved");
 					game.movePiece(row, col);
 				}
 
 				frame.repaint();
 
 				// "debug" message
-				System.out.println(Arrays.deepToString(board));
+//				System.out.println(Arrays.deepToString(board));
 
 			}
 
