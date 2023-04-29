@@ -89,10 +89,11 @@ public class Board extends JFrame {
 
 				int squareSize = 64;
 				int col, row;
-
+                                //boolean isRed;
 				row = e.getY() / squareSize;
 				col = e.getX() / squareSize;
-
+                                CPiece cp = getPiece(col, row);
+                                
 				/**
 				 * checks if a piece is selected
 				 * if not, selects a piece
@@ -103,7 +104,7 @@ public class Board extends JFrame {
 					game.setSelectedPiece(row, col);
 				} else {
 					System.out.println("Piece is moved");
-					game.movePiece(row, col);
+					game.movePiece(row, col, cp.isRed());
 				}
 
 				frame.repaint();

@@ -51,8 +51,8 @@ public class Game {
         selectedPiece = new int[]{row, col};
     }
 
-    public void movePiece(int row, int col) {
-        if (isValidMove(selectedPiece[0], selectedPiece[1], row, col)) {
+    public void movePiece(int row, int col, boolean isRed) {
+        if (isValidMove(selectedPiece[0], selectedPiece[1], row, col, isRed)) {
             board[row][col] = board[selectedPiece[0]][selectedPiece[1]];
             board[selectedPiece[0]][selectedPiece[1]] = 0;
         }
@@ -61,7 +61,7 @@ public class Game {
 
     }
 
-    public boolean isValidMove(int startRow, int startCol, int endRow, int endCol) {
+    public boolean isValidMove(int startRow, int startCol, int endRow, int endCol, boolean isRed) {
         System.out.println("startRow: " + startRow + " startCol: " + startCol + " endRow: " + endRow + " endCol: " + endCol);
 
         // Checks if the end position is within the board
@@ -100,7 +100,7 @@ public class Game {
             System.out.println("Invalid move: no jumpable piece");
             return false; // no jumpable piece
         }
-        if (board[jumpedRow][jumpedCol] == currentPlayer || board[jumpedRow][jumpedCol] == currentPlayer + 2) {
+        if ((board[jumpedRow][jumpedCol] == currentPlayer && isRed == true) || (board[jumpedRow][jumpedCol] == currentPlayer + 2 && isRed == false)) {
             System.out.println("Invalid move: cannot jump over your own piece");
             return false; // cannot jump over your own pieces
         }
