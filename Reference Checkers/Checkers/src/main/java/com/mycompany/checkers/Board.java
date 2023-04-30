@@ -61,14 +61,26 @@ public class Board extends JFrame {
 							CPiece p = new CPiece(b, a, false, cp);
 							g.setColor(Color.BLACK);
 							g.fillOval(b * 64 + 16, a * 64 + 16, 32, 32);
+						} else if (board[a][b] == 3) {
+							CPiece p = new CPiece(b, a, true, cp);
+							g.setColor(Color.RED);
+							g.fillOval(b * 64 + 16, a * 64 + 16, 32, 32);
+							g.setColor(Color.GREEN);
+							g.drawOval(b * 64 + 16, a * 64 + 16, 32, 32);
+						} else if (board[a][b] == 4) {
+							CPiece p = new CPiece(b, a, false, cp);
+							g.setColor(Color.BLACK);
+							g.fillOval(b * 64 + 16, a * 64 + 16, 32, 32);
+							g.setColor(Color.GREEN);
+							g.drawOval(b * 64 + 16, a * 64 + 16, 32, 32);
 						} else if (board[a][b] == 0) {
 							g.setColor(Color.RED); // not sure why this is here
 						}
 
-						if (a == selectedRow && b == selectedCol) {
-							g.setColor(Color.GREEN);
-							g.drawRect(b * 64, a * 64, 63, 63);
-						}
+//						if (a == selectedRow && b == selectedCol) {
+//							g.setColor(Color.GREEN);
+//							g.drawRect(b * 64, a * 64, 63, 63);
+//						}
 					}
 				}
 			}

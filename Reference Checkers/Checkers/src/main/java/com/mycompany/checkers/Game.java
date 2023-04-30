@@ -54,8 +54,18 @@ public class Game {
 
     public void movePiece(int row, int col, boolean isRed) {
         if (isValidMove(selectedPiece[0], selectedPiece[1], row, col, isRed)) {
-            board[row][col] = board[selectedPiece[0]][selectedPiece[1]];
-            board[selectedPiece[0]][selectedPiece[1]] = 0;
+
+            if (row == 0 && board[selectedPiece[0]][selectedPiece[1]] == 2) {
+                board[row][col] = 4;
+                board[selectedPiece[0]][selectedPiece[1]] = 0;
+            } else if (row == 7 && board[selectedPiece[0]][selectedPiece[1]] == 1) {
+                board[row][col] = 3;
+                board[selectedPiece[0]][selectedPiece[1]] = 0;
+            } else {
+                board[row][col] = board[selectedPiece[0]][selectedPiece[1]];
+                board[selectedPiece[0]][selectedPiece[1]] = 0;
+            }
+
         }
 
         selectedPiece = null;
@@ -118,7 +128,8 @@ public class Game {
                 board[midRow][midCol] = 0;
             }
         }
-        return true; // actually jump
+
+        return true; // actually move
     }
 
 }
