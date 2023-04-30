@@ -49,6 +49,7 @@ public class GameTest {
         boolean isRed = false;
         Game instance = new Game();
         instance.movePiece(row, col, isRed);
+        
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
