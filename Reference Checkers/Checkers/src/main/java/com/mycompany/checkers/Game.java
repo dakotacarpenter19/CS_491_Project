@@ -95,8 +95,7 @@ public class Game {
         if (board[startRow][startCol] == 2 && endRow > startRow) {
             System.out.println("Invalid move: black piece not moving in the correct direction");
             return false;
-        }
-        if (board[startRow][startCol] == 1 && endRow < startRow) {
+        } else if (board[startRow][startCol] == 1 && endRow < startRow) {
             System.out.println("Invalid move: red piece not moving in the correct direction");
             return false;
         }
@@ -111,7 +110,11 @@ public class Game {
             System.out.println("Invalid move: no jumpable piece");
             return false; // no jumpable piece
         }
-        if ((board[jumpedRow][jumpedCol] == currentPlayer && isRed == true) || (board[jumpedRow][jumpedCol] == currentPlayer + 2 && isRed == false)) {
+//        if ((board[jumpedRow][jumpedCol] == currentPlayer && isRed == true) || (board[jumpedRow][jumpedCol] == currentPlayer + 2 && isRed == false)) {
+//            System.out.println("Invalid move: cannot jump over your own piece");
+//            return false; // cannot jump over your own pieces
+//        }
+        if (board[startRow][startCol] == board[jumpedRow][jumpedCol]) {
             System.out.println("Invalid move: cannot jump over your own piece");
             return false; // cannot jump over your own pieces
         }
@@ -122,6 +125,18 @@ public class Game {
             int midCol = (startCol + endCol) / 2;
             // checks if piece is your own
             if (board[startRow][startCol] == board[midRow][midCol]) {
+                System.out.println("Cannot jump over your own piece");
+                return false;
+            } else if (board[startRow][startCol] == 3 && board[midRow][midCol] == 1) {
+                System.out.println("Cannot jump over your own piece");
+                return false;
+            } else if (board[startRow][startCol] == 4 && board[midRow][midCol] == 2) {
+                System.out.println("Cannot jump over your own piece");
+                return false;
+            } else if (board[startRow][startCol] == 1 && board[midRow][midCol] == 3) {
+                System.out.println("Cannot jump over your own piece");
+                return false;
+            } else if (board[startRow][startCol] == 2 && board[midRow][midCol] == 4) {
                 System.out.println("Cannot jump over your own piece");
                 return false;
             } else {
