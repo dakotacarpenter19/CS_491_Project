@@ -9,6 +9,8 @@ public class Game {
     private boolean isFull;
     private boolean pdestroy;
 
+    private int redCount, redKingCount, blackCount, blackKingCount;
+
     // need to implement this for turns
     private int currentPlayer;
 
@@ -23,25 +25,27 @@ public class Game {
         this.pdestroy = false;
 
         board = Board.getBoard();
+        redCount = 12;
+        blackCount = 12;
+        redKingCount = 0;
+        blackKingCount = 0;
 
     }
 
-    // this method currently is not used, I don't think we need to use it
-    public int[][] constructBoard() {
-        int[][] newBoard = new int[8][8];
-        System.out.println("" + newBoard.length + " " + newBoard[0].length);
-        for (int i = 0; i < newBoard.length; i++) {
-            for (int j = 0; i < newBoard[i].length; j++) {
-                if ((i + j) % 2 == 1 && i < 3) {
-                    newBoard[i][j] = 1;
-                } else if ((i + j) % 2 == 1 && i > 4) {
-                    newBoard[i][j] = 2;
-                } else {
-                    newBoard[i][j] = 0;
-                }
-            }
-        }
-        return newBoard;
+    public int getRedCount() {
+        return redCount;
+    }
+
+    public int getRedKingCount() {
+        return redKingCount;
+    }
+
+    public int getBlackCount() {
+        return blackCount;
+    }
+
+    public int getBlackKingCount() {
+        return blackKingCount;
     }
 
     public int[] getSelectedPiece() {
@@ -56,9 +60,13 @@ public class Game {
         if (isValidMove(selectedPiece[0], selectedPiece[1], row, col, isRed)) {
 
             if (row == 0 && board[selectedPiece[0]][selectedPiece[1]] == 2) {
+                blackCount--;
+                blackKingCount++;
                 board[row][col] = 4;
                 board[selectedPiece[0]][selectedPiece[1]] = 0;
             } else if (row == 7 && board[selectedPiece[0]][selectedPiece[1]] == 1) {
+                redCount--;
+                redKingCount++;
                 board[row][col] = 3;
                 board[selectedPiece[0]][selectedPiece[1]] = 0;
             } else {
@@ -140,6 +148,15 @@ public class Game {
                 System.out.println("Cannot jump over your own piece");
                 return false;
             } else {
+                if (board[midRow][midCol] == 1) {
+                    redCount--;
+                } else if (board[midRow][midCol] == 2) {
+                    blackCount--;
+                } else if (board[midRow][midCol] == 3) {
+                    redKingCount--;
+                } else if (board[midRow][midCol] == 4) {
+                    blackKingCount--;
+                }
                 board[midRow][midCol] = 0;
             }
         }

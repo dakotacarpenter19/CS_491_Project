@@ -119,6 +119,14 @@ public class Board extends JFrame {
 					game.movePiece(row, col, cp.isRed());
 				}
 
+				if (game.getBlackCount() == 0 && game.getBlackKingCount() == 0) {
+					System.out.println("Red wins!");
+					frame.dispose();
+				} else if (game.getRedCount() == 0 && game.getRedKingCount() == 0) {
+					System.out.println("Black wins!");
+					frame.dispose();
+				}
+
 				frame.repaint();
 
 				// "debug" message
