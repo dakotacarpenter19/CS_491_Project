@@ -15,6 +15,7 @@ public class Game {
     private int[][] board;
 
     private int[] selectedPiece;
+
    
     public Game(){
         this.validate = false;
@@ -82,11 +83,11 @@ public class Game {
         }
         // Checks if the piece is moving in the correct direction
         if (board[startRow][startCol] == 2 && endRow > startRow) {
-            System.out.println("Invalid move: red piece not moving in the correct direction");
+            System.out.println("Invalid move: black piece not moving in the correct direction");
             return false;
         }
         if (board[startRow][startCol] == 1 && endRow < startRow) {
-            System.out.println("Invalid move: black piece not moving in the correct direction");
+            System.out.println("Invalid move: red piece not moving in the correct direction");
             return false;
         }
         // Checks if the move is regular or jump
@@ -103,6 +104,19 @@ public class Game {
         if ((board[jumpedRow][jumpedCol] == currentPlayer && isRed == true) || (board[jumpedRow][jumpedCol] == currentPlayer + 2 && isRed == false)) {
             System.out.println("Invalid move: cannot jump over your own piece");
             return false; // cannot jump over your own pieces
+        }
+
+        // removed jumped pieces
+        if (Math.abs(endRow - startRow) == 2) {
+            int midRow = (startRow + endRow) / 2;
+            int midCol = (startCol + endCol) / 2;
+            // checks if piece is your own
+            if (board[startRow][startCol] == board[midRow][midCol]) {
+                System.out.println("Cannot jump over your own piece");
+                return false;
+            } else {
+                board[midRow][midCol] = 0;
+            }
         }
         return true; // actually jump
     }
