@@ -13,7 +13,7 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
- CPieceTest.class, GameTest.class
+ CPieceTest.class, GameTest.class, BoardTest.class
 
 })
 public class AllTest {
