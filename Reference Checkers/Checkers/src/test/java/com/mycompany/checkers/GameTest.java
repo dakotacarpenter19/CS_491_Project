@@ -8,47 +8,51 @@ import java.util.Arrays;
 import java.util.Collection;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 /**
  *
- * @author wincr
+ * @author Austin Winters
  */
-
+//@RunWith(Parameterized.class)
 public class GameTest {
-
+    //private Integer row, col;
+    private Game game;
     public GameTest() {
-     
+       // this.row = row;
+       // this.col = col;
+        
     
     }
-
-
-    /**
-     * Test of setSelectedPiece method, of class Game.
-     */
+    
     @Test
-    public void testSetSelectedPiece() {
-        System.out.println("setSelectedPiece");
-        int row = 0;
-        int col = 0;
-        Game instance = new Game();
-        instance.setSelectedPiece(row, col);
-        // TODO review the generated test code and remove the default call to fail.
-       // fail("The test case is a prototype.");
+    public void testSelectedPieces(){
+        game = new Game();
+        game.setSelectedPiece(0, 0);
+       assertTrue(game.getSelectedPiece()!= null);
+    
     }
-
+    
+    
     /**
      * Test of movePiece method, of class Game.
      */
     @Test
     public void testMovePiece() {
         System.out.println("movePiece");
-        int row = 0;
-        int col = 0;
+        
+        game = new Game();
+        
+        int r = 0;
+        int c = 0;
         boolean isRed = false;
-        Game instance = new Game();
-        instance.movePiece(row, col, isRed);
+       game.setSelectedPiece(2, 3);
+       
+        game.movePiece(r, c, isRed);
+        assertTrue(game.getSelectedPiece() == null);
+        
         
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -58,6 +62,7 @@ public class GameTest {
     /**
      * Test of isValidMove method, of class Game.
      */
+    
     @Test
     public void testIsValidMove() {
         System.out.println("isValidMove");
@@ -117,7 +122,7 @@ public class GameTest {
         assertEquals(expResult, result);        
     }
 
- 
+
  
     
 }
