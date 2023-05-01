@@ -6,8 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.LinkedList;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.util.Arrays;
 
 /**
@@ -16,9 +15,10 @@ import java.util.Arrays;
 
 public class Board extends JFrame {
 	public static LinkedList<CPiece> cp = new LinkedList<>();
-
 	private int selectedRow = -1;
 	private int selectedCol = -1;
+	JDialog winner;
+
 	private static int[][] board = {
 			{1, 0, 1, 0, 1, 0, 1, 0},
 			{0, 1, 0, 1, 0, 1, 0, 1},
@@ -29,8 +29,6 @@ public class Board extends JFrame {
 			{2, 0, 2, 0, 2, 0, 2, 0},
 			{0, 2, 0, 2, 0, 2, 0, 2},
 	};
-
-	private int[] selectedPiece;
 
 	public Board() {
 		Game game = new Game();
@@ -73,14 +71,12 @@ public class Board extends JFrame {
 							g.fillOval(b * 64 + 16, a * 64 + 16, 32, 32);
 							g.setColor(Color.GREEN);
 							g.drawOval(b * 64 + 16, a * 64 + 16, 32, 32);
-						} else if (board[a][b] == 0) {
-							g.setColor(Color.RED); // not sure why this is here
 						}
 
-//						if (a == selectedRow && b == selectedCol) {
-//							g.setColor(Color.GREEN);
-//							g.drawRect(b * 64, a * 64, 63, 63);
-//						}
+						if (a == selectedRow && b == selectedCol) {
+							g.setColor(Color.GREEN);
+							g.drawRect(b * 64, a * 64, 63, 63);
+						}
 					}
 				}
 			}
@@ -98,14 +94,13 @@ public class Board extends JFrame {
 		frame.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-
 				int squareSize = 64;
 				int col, row;
-                                //boolean isRed;
 				row = e.getY() / squareSize;
 				col = e.getX() / squareSize;
-                                CPiece cp = getPiece(col, row);
-                                
+
+				CPiece cp = getPiece(col, row);
+
 				/**
 				 * checks if a piece is selected
 				 * if not, selects a piece
@@ -113,25 +108,34 @@ public class Board extends JFrame {
 				 */
 				if (game.getSelectedPiece() == null) {
 					System.out.println("Piece is selected");
+					selectedRow = row;
+					selectedCol = col;
 					game.setSelectedPiece(row, col);
 				} else {
+					selectedRow = -1;
+					selectedCol = -1;
 					System.out.println("Piece is moved");
 					game.movePiece(row, col, cp.isRed());
 				}
 
+				/**
+				 * Checks if there are any remaining pieces left for each player
+				 */
 				if (game.getBlackCount() == 0 && game.getBlackKingCount() == 0) {
-					System.out.println("Red wins!");
-					frame.dispose();
+					winner = new JDialog(frame, "Winner!");
+					JLabel label1 = new JLabel("Red wins!");
+					winner.add(label1);
+					winner.setSize(100,100);
+					winner.setVisible(true);
 				} else if (game.getRedCount() == 0 && game.getRedKingCount() == 0) {
-					System.out.println("Black wins!");
-					frame.dispose();
+					winner = new JDialog(frame, "Winner!");
+					JLabel label2 = new JLabel("Black wins!");
+					winner.add(label2);
+					winner.setSize(100,100);
+					winner.setVisible(true);
 				}
 
 				frame.repaint();
-
-				// "debug" message
-//				System.out.println(Arrays.deepToString(board));
-
 			}
 
 			@Override
@@ -168,7 +172,6 @@ public class Board extends JFrame {
 		return null;
 	}
 
-	// not sure if necessary
 	public static int[][] getBoard() {
 		return board;
 	}
