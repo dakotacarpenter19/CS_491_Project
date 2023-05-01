@@ -8,14 +8,8 @@ public class Game {
     private boolean validate;
     private boolean isFull;
     private boolean pdestroy;
-
     private int redCount, redKingCount, blackCount, blackKingCount;
-
-    // need to implement this for turns
-    private int currentPlayer;
-
     private int[][] board;
-
     private int[] selectedPiece;
 
    
@@ -73,38 +67,35 @@ public class Game {
                 board[row][col] = board[selectedPiece[0]][selectedPiece[1]];
                 board[selectedPiece[0]][selectedPiece[1]] = 0;
             }
-
         }
-
         selectedPiece = null;
-
     }
 
     public boolean isValidMove(int startRow, int startCol, int endRow, int endCol, boolean isRed) {
-        System.out.println("startRow: " + startRow + " startCol: " + startCol + " endRow: " + endRow + " endCol: " + endCol);
+//        System.out.println("startRow: " + startRow + " startCol: " + startCol + " endRow: " + endRow + " endCol: " + endCol);
 
         // Checks if the end position is within the board
         if (endRow < 0 || endRow > 7 || endCol < 0 || endCol > 7) {
-            System.out.println("endRow = " + endRow + " and endCol = " + endCol);
-            System.out.println("Invalid move: end position is not within the board");
+//            System.out.println("endRow = " + endRow + " and endCol = " + endCol);
+//            System.out.println("Invalid move: end position is not within the board");
             return false;
         }
         // Checks if the end position is empty
         if (board[endRow][endCol] != 0) {
-            System.out.println("Invalid move: end position is not empty");
+//            System.out.println("Invalid move: end position is not empty");
             return false;
         }
         // Checks if the move is diagonal
         if (Math.abs(endRow - startRow) != Math.abs(endCol - startCol)) {
-            System.out.println("Invalid move: move is not diagonal");
+//            System.out.println("Invalid move: move is not diagonal");
             return false;
         }
         // Checks if the piece is moving in the correct direction
         if (board[startRow][startCol] == 2 && endRow > startRow) {
-            System.out.println("Invalid move: black piece not moving in the correct direction");
+//            System.out.println("Invalid move: black piece not moving in the correct direction");
             return false;
         } else if (board[startRow][startCol] == 1 && endRow < startRow) {
-            System.out.println("Invalid move: red piece not moving in the correct direction");
+//            System.out.println("Invalid move: red piece not moving in the correct direction");
             return false;
         }
         // Checks if the move is regular or jump
@@ -115,15 +106,12 @@ public class Game {
         int jumpedRow = (startRow + endRow) / 2;
         int jumpedCol = (startCol + endCol) / 2;
         if (board[jumpedRow][jumpedCol] == 0) {
-            System.out.println("Invalid move: no jumpable piece");
+//            System.out.println("Invalid move: no jumpable piece");
             return false; // no jumpable piece
         }
-//        if ((board[jumpedRow][jumpedCol] == currentPlayer && isRed == true) || (board[jumpedRow][jumpedCol] == currentPlayer + 2 && isRed == false)) {
-//            System.out.println("Invalid move: cannot jump over your own piece");
-//            return false; // cannot jump over your own pieces
-//        }
+
         if (board[startRow][startCol] == board[jumpedRow][jumpedCol]) {
-            System.out.println("Invalid move: cannot jump over your own piece");
+//            System.out.println("Invalid move: cannot jump over your own piece");
             return false; // cannot jump over your own pieces
         }
 
@@ -133,19 +121,19 @@ public class Game {
             int midCol = (startCol + endCol) / 2;
             // checks if piece is your own
             if (board[startRow][startCol] == board[midRow][midCol]) {
-                System.out.println("Cannot jump over your own piece");
+//                System.out.println("Cannot jump over your own piece");
                 return false;
             } else if (board[startRow][startCol] == 3 && board[midRow][midCol] == 1) {
-                System.out.println("Cannot jump over your own piece");
+//                System.out.println("Cannot jump over your own piece");
                 return false;
             } else if (board[startRow][startCol] == 4 && board[midRow][midCol] == 2) {
-                System.out.println("Cannot jump over your own piece");
+//                System.out.println("Cannot jump over your own piece");
                 return false;
             } else if (board[startRow][startCol] == 1 && board[midRow][midCol] == 3) {
-                System.out.println("Cannot jump over your own piece");
+//                System.out.println("Cannot jump over your own piece");
                 return false;
             } else if (board[startRow][startCol] == 2 && board[midRow][midCol] == 4) {
-                System.out.println("Cannot jump over your own piece");
+//                System.out.println("Cannot jump over your own piece");
                 return false;
             } else {
                 if (board[midRow][midCol] == 1) {
