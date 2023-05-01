@@ -1,6 +1,6 @@
 # <p align="right">Software Requirements Specification<br><br>For<br><br>Checkers</p>
 
-## <p align="right">Prepared by Dakota Carpenter, Austin Winters, and Lale Saparova<br><br>WIU CS 492 Software Engineering II<br><br>2.22.2023</p>
+## <p align="right">Prepared by Dakota Carpenter, Austin Winters, and Lale Saparova<br><br>WIU CS 492 Software Engineering II<br><br>5.01.2023</p>
 
 # Table of Contents
 
@@ -42,13 +42,13 @@ Appendix C: Issues List<br>
 This Software Requirements Specification document is intended to demonstrate the (partial or whole) utter outline of the computer-based game project Checkers, including game mechanics, user interface, and user experience. The SRS list includes all the characteristics Checkers have and those that are crucial to their application. 
 
 ## 1.2 Document Conventions
-There is a disparity between player_1 and player_2. Player 2 can be the character that is being controlled by another person or a CPU player. Whereas player_1 is always an actual person engaging with the game. The SRS documentation printed in Times New Roman font with the normal text size 12 black. 
+The SRS documentation printed in Times New Roman font with the normal text size 12 black. 
 
 ## 1.3 Intended Audience and Reading Suggestions  
-The SRS paper also explains project managers and tests a mechanism to make sure that the game stays true to the original version. The text was prepared in segments and may therefore be viewed as such to fully grasp the project. The overall description for a summary of the document might be viewed in Section 2. The System features provide a thorough explanation of the gaming components and how they relate to each other and can be viewed in Section 3. The additional non-functional requirements outline the technical standards the team will adhere to the project in Section 5.
+The SRS paper also explains project managers and tests a mechanism to make sure that the game stays true to the original version. The text was prepared in segments and may therefore be viewed as such to fully grasp the project. The overall description for a summary of the document might be viewed in Section 2. The system features provide a thorough explanation of the gaming components and how they relate to each other and can be viewed in Section 3. The additional non-functional requirements outline the technical standards the team will adhere to are in Section 5.
 
 ## 1.4 Project Scope 
-This system's scope is to create a checkers gaming platform using the NetBeans GUI interface. The system will support the game with multiple players including a CPU player. On opposite ends of the gaming board, two opponents play the game of checkers. Players 1 and 2 each have a set of dark and light pieces.  Player’s switch turns. An opponent's pieces cannot be moved by a player. The support for the fundamental set of features (multiplayer, CPU), as well as the simplicity of developing game comprehension, are advantages of creating this game. This game is available for low-memory devices.
+This system's scope is to create a checkers gaming platform using the NetBeans GUI interface. The system will support the game with multiple players including a CPU player. On opposite ends of the gaming board, two opponents play the game of checkers. Players 1 and 2 each have a set of red and black pieces. The support for the fundamental set of features (multiplayer), as well as the simplicity of developing game comprehension, are advantages of creating this game. This game is available for low-memory devices.
 
 ## 1.5 References
 Game Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
@@ -59,7 +59,7 @@ Game Instructions: https://en.wikipedia.org/wiki/Checkers#General_rules
 This product is a replacement for certain existing systems. The consumer can alter the game's state by interacting with it while offline. The user's device must support Java 8 or later versions.
 
 ## 2.2 Product Features
-This product will have a fully playable Checkers game. It will have a simple multiplayer feature that allows the user to play against another human or a CPU player. The program will also include an easily understandable user interface. 
+This product will have a fully playable Checkers game. It will have a simple multiplayer feature that allows the user to play against another human. The program will also include an easily understandable user interface. 
 
 ## 2.3 User Classes and Characteristics
 We anticipate that this product will be primarily used by a younger audience with a basic level of literacy. Our product can also be used by people of older ages as well, but the simplicity may not be as appealing or necessary for that user class.
@@ -88,10 +88,10 @@ The user can learn how to play checkers using several online resources, such as 
 ## 3.1 Multiplayer
 
 ### 3.1.1 Description and Priority
-The user should be able to play against another person or a CPU player. This feature is of high priority. 
+The user should be able to play against another person. This feature is of high priority. 
 
 ### 3.1.2 Functional Requirements
-REQ-1: Player selection
+REQ-1: Player moves.
 
 ## 3.2 Stalemate/draw Detection
 
