@@ -1,1 +1,3 @@
-# CS_491_Project_1
+# README
+
+java -jar Checkers_Java8.jar
