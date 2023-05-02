@@ -7,7 +7,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.LinkedList;
 import javax.swing.*;
-import java.util.Arrays;
 
 /**
  * @author Austin Winters, Dakota Carpenter
@@ -32,7 +31,6 @@ public class Board extends JFrame {
 
 	public Board() {
 		Game game = new Game();
-
 		JFrame frame = new JFrame();
 		frame.setBounds(0, 0, 528, 551);
 		frame.setTitle("Checkers");
@@ -107,14 +105,12 @@ public class Board extends JFrame {
 				 * if so, moves the selected piece
 				 */
 				if (game.getSelectedPiece() == null) {
-//					System.out.println("Piece is selected");
 					selectedRow = row;
 					selectedCol = col;
 					game.setSelectedPiece(row, col);
 				} else {
 					selectedRow = -1;
 					selectedCol = -1;
-//					System.out.println("Piece is moved");
 					game.movePiece(row, col, cp.isRed());
 				}
 
@@ -156,10 +152,8 @@ public class Board extends JFrame {
 		frame.add(panel);
 		frame.setDefaultCloseOperation(3);
 		frame.setVisible(true);
-
 	}
 
-	// might not need
 	public static CPiece getPiece(int x, int y) {
 		int xp = x / 64;
 		int yp = y / 64;
