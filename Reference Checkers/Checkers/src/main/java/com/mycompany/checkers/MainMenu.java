@@ -8,8 +8,7 @@ package com.mycompany.checkers;
 
 /**
  *
- * @author Dakota Carpenter, Austin Winters
- * Dakota did the Main Menu.
+ * @author Austin Winters, Dakota Carpenter
  */
 public class MainMenu extends javax.swing.JFrame {
 
